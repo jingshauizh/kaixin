@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bump_guid_bg_padding_left">8.0dip</dimen>
+    <dimen name="bump_guid_bg_padding_right">8.0dip</dimen>
+    <dimen name="bump_guid_bg_padding_top">8.0dip</dimen>
+    <dimen name="bump_guid_bg_padding_bottom">20.0dip</dimen>
+    <dimen name="page_send_ugc_main_with_friend_logo_square">27.0dip</dimen>
+    <dimen name="with_friend_logo_space">5.0dip</dimen>
+    <dimen name="max_volume_height">66.0dip</dimen>
+    <dimen name="MENU_RADIUSA">390.0dip</dimen>
+    <dimen name="MENU_RADIUSB">390.0dip</dimen>
+    <dimen name="MENU_CENTERX">370.0dip</dimen>
+    <dimen name="MENU_CENTERY">-132.0dip</dimen>
+    <dimen name="MENU_STARTMARGINX">20.0dip</dimen>
+    <dimen name="MENU_BUTTONSIZE">44.0dip</dimen>
+    <dimen name="CLOUD_ALBUM_ITEM_WIDTH">94.0dip</dimen>
+    <dimen name="CLOUD_ALBUM_ITEM_PROGRESSBAR_WIDTH">86.0dip</dimen>
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="activity_vertical_margin">16.0dip</dimen>
+</resources>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/global_top_background" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/kaixin_title_bar_left_button" android:background="@drawable/title_lbtn_pressed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/title_home_button" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <com.kaixin001.view.KaiXinProgressBar android:id="@id/kaixin_title_bar_left_progress_bar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable_white" android:layout_toRightOf="@id/kaixin_title_bar_left_button" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/kaixin_title_bar_line" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="0.0dip" android:src="@drawable/globle_line_top" android:layout_toRightOf="@id/kaixin_title_bar_left_button" android:layout_centerVertical="true" />
+    <RelativeLayout android:id="@id/kaixin_title_bar_line2" android:background="#ff505050" android:visibility="gone" android:layout_width="2.0px" android:layout_height="24.0dip" android:layout_marginLeft="0.0dip" android:layout_toRightOf="@id/kaixin_title_bar_line" android:layout_centerVertical="true">
+        <View android:background="#ff202020" android:layout_width="1.0px" android:layout_height="fill_parent" />
+    </RelativeLayout>
+    <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/kaixin_title_bar_center_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="0.0dip" android:layout_marginRight="45.0dip" android:layout_toRightOf="@id/kaixin_title_bar_line">
+        <ImageView android:id="@id/kaixin_title_bar_center_icon" 
+            android:visibility="gone" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:src="@drawable/kaixinwang" />
+        <TextView 
+            android:textSize="18.0sp" 
+            android:textColor="@drawable/white" 
+            android:ellipsize="end" 
+            android:gravity="left|center" 
+            android:id="@id/kaixin_title_bar_center_text" 
+           
+            android:layout_width="wrap_content" 
+            android:layout_height="fill_parent" 
+            android:layout_marginLeft="10.0dip" 
+            android:singleLine="true" 
+            android:shadowColor="#88000000" 
+            android:shadowDx="0.0" 
+            android:shadowDy="-1.0" 
+            android:shadowRadius="1.0" 
+            android:layout_alignParentLeft="true"
+             />
+        <ImageView android:layout_gravity="left|center" 
+            android:id="@id/kaixin_title_bar_arrow_icon" 
+            android:paddingRight="10.0dip" 
+            android:visibility="gone" 
+            android:duplicateParentState="true" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginLeft="90.0dip" 
+            android:src="@drawable/title_bar_arrow_down_bg" 
+            android:layout_alignParentLeft="true" />
+    </RelativeLayout>
+    <TextView android:textSize="18.0sp" 
+        android:textColor="@drawable/white" 
+        android:id="@+id/kaixin_title_bar_mid_text" 
+        android:visibility="gone" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:shadowColor="#88000000" 
+        android:shadowDx="0.0" 
+        android:shadowDy="-1.0" 
+        android:shadowRadius="1.0" 
+        android:layout_centerInParent="true" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true">
+        <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <Button android:textSize="18.0sp" android:textColor="@drawable/kaixin_text_color_white" android:layout_gravity="center" android:id="@id/ranking" android:background="@drawable/title_rbtn_pressed" android:padding="12.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/title_logout_button" />
+            <ImageView android:textColor="@drawable/kaixin_text_color_white" android:gravity="center" android:layout_gravity="center" android:id="@id/kaixin_title_bar_progress_button" android:background="@drawable/title_mbtn_pressed" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/title_logout_button" android:scaleType="center" />
+            <com.kaixin001.view.KaiXinProgressBar 
+                android:layout_gravity="center" 
+                android:id="@id/kaixin_title_bar_progress_bar" 
+                android:visibility="gone" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:layout_marginLeft="1.0dip" 
+                android:layout_marginTop="1.0dip" 
+                android:indeterminateDrawable="@drawable/progress_bar_drawable_white" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/kaixin_title_bar_right_line" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/globle_line_top" />
+        <FrameLayout android:id="@id/kaixin_title_bar_right_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+            <ImageView android:textColor="@drawable/white" android:gravity="center" android:layout_gravity="center" android:id="@id/kaixin_title_bar_right_button" android:background="@drawable/title_rbtn_pressed" android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/title_logout_button" android:scaleType="center" />
+            <com.kaixin001.view.KaiXinProgressBar android:layout_gravity="center" android:id="@id/kaixin_title_bar_progressbar" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progress_bar_drawable_white" />
+            <TextView android:textSize="14.699982sp" android:textColor="@drawable/white" android:gravity="right|center" android:layout_gravity="center_vertical" android:id="@id/kaixin_title_bar_right_text" android:background="@drawable/title_rbtn_pressed" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:shadowColor="#88000000" android:shadowDx="0.0" android:shadowDy="-1.0" android:shadowRadius="1.0" android:drawableLeft="@drawable/globle_line_top" android:drawablePadding="9.399994dip" />
+            <Button android:textSize="14.699982sp" android:textColor="@drawable/white" android:gravity="right|center" android:layout_gravity="center_vertical" android:id="@id/kaixin_title_bar_right_text_btn" android:background="@drawable/title_rbtn_pressed" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:shadowColor="#88000000" android:shadowDx="0.0" android:shadowDy="-1.0" android:shadowRadius="1.0" />
+        </FrameLayout>
+    </LinearLayout>
+</RelativeLayout>

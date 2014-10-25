@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+	android:background="@drawable/kaixin_background" 
+	android:layout_width="fill_parent" 
+	android:layout_height="fill_parent"
+  	xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@+id/home_title_bar" 
+        android:layout_alignParentTop="true"
+        android:layout_width="fill_parent" 
+    	android:layout_height="50.0dip"  
+        layout="@layout/kaixin_title_bar" />
+    <com.kaixin001.view.KXScrollView 
+    android:id="@+id/login_scrollview" 
+    android:paddingBottom="10.0dip" 
+    android:scrollbars="vertical" 
+    android:fadingEdge="none" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent" 
+    android:cacheColorHint="@drawable/transparent" 
+    android:layout_below="@+id/home_title_bar"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout 
+        android:orientation="vertical" 
+        android:layout_width="fill_parent" 
+        android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView 
+            android:id="@+id/login_titlebar" 
+            android:layout_width="72.0dip" 
+            android:layout_height="72.0dip" 
+            android:layout_marginTop="21.0dip" 
+            android:src="@drawable/login_logo" 
+            android:scaleType="centerInside" 
+            android:layout_centerHorizontal="true" />
+            <ImageView android:id="@+id/welcome" 
+            android:visibility="gone" 
+            android:layout_width="220.0dip" 
+            android:layout_height="20.0dip" 
+            android:src="@drawable/login_slogan" 
+            android:scaleType="centerInside" 
+            android:layout_below="@+id/login_titlebar" 
+            android:layout_centerHorizontal="true" />
+            <RelativeLayout android:gravity="center_horizontal" 
+            android:id="@+id/login_idlayout" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:layout_marginTop="20.0dip" 
+            android:layout_below="@+id/welcome" 
+            android:layout_centerHorizontal="true">
+                <AutoCompleteTextView 
+                android:textColor="@drawable/black_news" 
+                android:textColorHint="#ffdddddd" 
+                android:id="@+id/login_etID" 
+                android:background="@drawable/globle_input_bg" 
+                android:layout_width="300.0dip" 
+                android:layout_height="45.0dip" 
+                android:hint="请输入账号" 
+                android:singleLine="true" android:maxLength="300" 
+                android:drawableLeft="@drawable/login_icon_account" 
+                android:completionThreshold="1" 
+                android:layout_centerHorizontal="true" 
+                android:inputType="textEmailAddress"
+                android:text="13916913181" />
+                <ImageView 
+                android:id="@+id/login_etID_delete" 
+                android:paddingRight="6.0dip" 
+                android:paddingBottom="13.0dip" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:src="@drawable/global_btn_clear" 
+                android:layout_alignRight="@+id/login_etID" 
+                android:layout_alignBottom="@+id/login_etID" />
+                <EditText 
+                android:textColor="@drawable/black_news" 
+                android:textColorHint="#ffdddddd" 
+                android:id="@+id/login_etPwd" 
+                android:background="@drawable/globle_input_bg" 
+                android:layout_width="300.0dip" 
+                android:layout_height="45.0dip" 
+                android:layout_marginTop="5.0dip" 
+                android:hint="请输入密码" 
+                android:password="true" 
+                android:singleLine="true" 
+                android:maxLength="300" 
+                android:drawableLeft="@drawable/login_icon_password" 
+                android:layout_below="@+id/login_etID" 
+                android:layout_centerHorizontal="true"
+                android:text="461670aa" />
+            </RelativeLayout>
+            <TextView 
+            android:textSize="14.0sp" 
+            android:textColor="#ffb4b4b4" 
+            android:gravity="center_vertical" 
+            android:id="@+id/login_forget_password" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+             android:layout_marginTop="12.0dip" 
+             android:text="@string/login_forget_password" 
+             android:shadowColor="#ffffffff" 
+             android:shadowDx="0.0" 
+             android:shadowDy="1.0" 
+             android:shadowRadius="1.0" 
+             android:drawableRight="@drawable/login_icon_enter" 
+             android:drawablePadding="4.0dip" 
+             android:layout_below="@+id/login_idlayout" 
+             android:layout_alignRight="@+id/login_idlayout" />
+            <Button 
+            android:textSize="18.0sp" 
+            android:textColor="#7fffffff" 
+            android:gravity="center" 
+            android:id="@+id/login_btnLogin" 
+            android:background="@drawable/login_btn" 
+            android:clickable="true" 
+            android:layout_width="300.0dip" 
+            android:layout_height="45.0dip" 
+            android:layout_marginTop="30.0dip" 
+            android:text="@string/login_btn" 
+            android:shadowColor="#7f000000" 
+            android:shadowDx="0.0" 
+            android:shadowDy="1.0" 
+            android:shadowRadius="1.0" 
+            android:layout_below="@+id/login_forget_password" 
+            android:layout_centerHorizontal="true" 
+            android:onClick="onClickGetPlataData"/>
+            <View 
+            android:layout_width="fill_parent" 
+            android:layout_height="90.0dip" 
+            android:layout_below="@+id/login_btnLogin" />
+            <LinearLayout android:gravity="center" 
+            android:orientation="vertical" 
+            android:layout_width="fill_parent" 
+            android:layout_height="fill_parent" 
+            android:layout_marginTop="20.0dip" 
+            android:layout_below="@+id/login_btnLogin">
+                <RelativeLayout android:layout_gravity="center" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content">
+                    <ImageView 
+                    android:id="@+id/login_anzhi" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:src="@drawable/login_anzhuo" 
+                    android:scaleType="centerInside" 
+                    android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.kaixin001.view.KXScrollView>
+    <LinearLayout 
+    android:id="@+id/bottom_btns_layout" 
+    android:background="#ffe3e3e3"
+     android:paddingTop="1.0dip" 
+     android:layout_width="fill_parent" 
+     android:layout_height="48.0dip" 
+     android:layout_alignParentBottom="true">
+        <TextView android:textSize="16.0sp" 
+        android:textColor="@drawable/button_text_color2" 
+        android:gravity="center_vertical" 
+        android:id="@+id/bottom_btns_left" 
+        android:background="@drawable/fancydialog_item_bg" 
+        android:paddingLeft="7.0dip" 
+        android:layout_width="wrap_content" 
+        android:layout_height="fill_parent" 
+        android:text="@string/login_user_qq" 
+        android:drawableLeft="@drawable/login_icon_qq" 
+        android:layout_weight="1.0" />
+        <TextView 
+        android:textSize="16.0sp" 
+        android:textColor="@drawable/button_text_color2" 
+        android:gravity="center_vertical" 
+        android:id="@+id/bottom_btns_right" 
+        android:background="@drawable/fancydialog_item_bg" 
+        android:paddingLeft="7.0dip" 
+        android:layout_width="wrap_content" 
+        android:layout_height="fill_parent" 
+        android:layout_marginLeft="1.0dip" 
+        android:text="@string/login_user_weibo" 
+        android:drawableLeft="@drawable/login_icon_sina" 
+        android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

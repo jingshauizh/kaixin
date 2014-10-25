@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/horoscope_setting_name">
+        <CheckBoxPreference android:title="@string/horoscope_setting_push_title" android:key="horoscope_setting_push" android:defaultValue="true" android:summaryOn="@string/horoscope_setting_push_on" android:summaryOff="@string/horoscope_setting_push_off" />
+        <ListPreference android:entries="@array/horoscope_choose_content" android:title="@string/horoscope_setting_choose_title" android:key="horoscope_setting_choose_list" android:dependency="horoscope_setting_push" android:defaultValue="1" android:entryValues="@array/horoscope_choose_content_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

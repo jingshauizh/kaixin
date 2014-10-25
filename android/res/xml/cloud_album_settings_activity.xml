@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/cloud_album_setting_name">
+        <CheckBoxPreference android:title="@string/cloud_album_setting_network_name" android:key="cloud_album_setting_network_pref" android:defaultValue="true" android:summaryOn="@string/cloud_album_setting_wifi_sync" android:summaryOff="@string/cloud_album_setting_wifi_sync" />
+        <ListPreference android:entries="@array/cloud_album_setting_content" android:title="@string/cloud_album_setting_content_name" android:key="cloud_album_setting_content_pref" android:dependency="cloud_album_setting_network_pref" android:defaultValue="1" android:entryValues="@array/cloud_album_setting_content_values" />
+    </PreferenceCategory>
+</PreferenceScreen>

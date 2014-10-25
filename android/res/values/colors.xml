@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="circle_text_bg">#ffcccccc</color>
+    <color name="translucent">#77000000</color>
+    <color name="transparent">#00000000</color>
+    <color name="result_view">#b0000000</color>
+    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="viewfinder_frame">#ff000000</color>
+    <color name="viewfinder_laser">#ffff0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+    <color name="yun_bg_pro">#fff9f6f2</color>
+    <color name="result_points">#c000ff00</color>
+    <color name="tabbg_default">#ffebebeb</color>
+    <color name="tab_font_default">#ff999999</color>
+    <color name="tab_font_selected_blueStyle4">#ff38b2cf</color>
+    <color name="horoscope_text_color_selected">#ffffffff</color>
+    <color name="horoscope_text_color">#ff666666</color>
+</resources>
