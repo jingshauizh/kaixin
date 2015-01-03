@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/ugc_bar_backgroud_botton" android:layout_width="fill_parent" android:layout_height="60.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <ImageButton android:id="@id/ugc_btn_voice" android:background="@drawable/button_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ugc_btn_voice_botton" android:layout_weight="1.0" android:contentDescription="@string/app_name" />
+        <ImageButton android:id="@id/ugc_btn_record" android:background="@drawable/button_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ugc_btn_record_botton" android:layout_weight="1.0" android:contentDescription="@string/app_name" />
+        <ImageButton android:id="@id/ugc_btn_takephoto" android:background="@drawable/button_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ugc_btn_takephoto_botton" android:layout_weight="1.0" android:contentDescription="@string/app_name" />
+        <ImageButton android:id="@id/ugc_btn_lbs" android:background="@drawable/button_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ugc_btn_lbs_botton" android:layout_weight="1.0" />
+    </LinearLayout>
+</RelativeLayout>

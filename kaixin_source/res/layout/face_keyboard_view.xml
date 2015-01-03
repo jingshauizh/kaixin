@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#fff5f5f5" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/face_keyboard_view_top_line" android:background="#ffe3e3e3" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="178.0dip">
+        <android.support.v4.view.ViewPager android:id="@id/face_keyboard_view_viewpager" android:layout_width="fill_parent" android:layout_height="178.0dip" />
+        <android.support.v4.view.ViewPager android:id="@id/face_keyboard_view_viewpager2" android:layout_width="fill_parent" android:layout_height="178.0dip" />
+    </RelativeLayout>
+    <com.kaixin001.view.IndexIndicateView android:id="@id/face_keyboard_view_viewpager_index" android:layout_width="fill_parent" android:layout_height="6.0dip" android:layout_marginBottom="12.0dip" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:background="#ffe3e3e3" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_weight="1.0">
+            <Button android:textSize="14.0sp" android:textColor="@drawable/gray2" android:id="@id/face_keyboard_view_kx_btn" android:background="@drawable/face_type_button_normal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/face_type_kaixin" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:background="#ffe3e3e3" android:paddingTop="2.0dip" android:paddingRight="2.0dip" android:paddingBottom="2.0dip" android:layout_width="wrap_content" android:layout_height="44.0dip" android:layout_weight="1.0">
+            <Button android:textSize="14.0sp" android:textColor="@drawable/gray2" android:id="@id/face_keyboard_view_emoji_btn" android:background="@drawable/face_type_button_normal" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/face_type_emoji" android:layout_weight="1.0" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

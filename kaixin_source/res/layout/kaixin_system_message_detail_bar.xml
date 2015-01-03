@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/kaixin_message_detail_layout" android:background="@drawable/recordtwitter_original_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.kaixin001.view.KXIntroView android:textSize="14.0dip" android:textColor="@drawable/gray4" android:id="@id/kaixin_system_message_original_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/kaixin_system_message_original_image_layout" android:padding="2.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/kaixin_system_message_original_content">
+        <ImageView android:id="@id/kaixin_system_message_original_image1" android:background="@drawable/picture_border" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="58.0dip" android:maxHeight="58.0dip" />
+        <ImageView android:id="@id/kaixin_system_message_original_image2" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:maxWidth="58.0dip" android:maxHeight="58.0dip" />
+        <ImageView android:id="@id/kaixin_system_message_original_image3" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:maxWidth="58.0dip" android:maxHeight="58.0dip" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/gray8" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_view_more_item" android:background="@drawable/circle_listview_bottom_item_bg" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight">
+        <ProgressBar android:id="@id/news_more_probar" android:visibility="invisible" android:layout_width="25.0dip" android:layout_height="22.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_findfriend_drawable" android:layout_toLeftOf="@id/news_more_tv" android:layout_centerInParent="true" style="?android:attr/progressBarStyle" />
+        <ImageView android:id="@id/news_more_image" android:visibility="invisible" android:layout_width="25.0dip" android:layout_height="22.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:src="@drawable/addfriend_change" android:layout_toLeftOf="@id/news_more_tv" android:layout_centerInParent="true" />
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/blue_link" android:id="@id/news_more_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/change_other" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</LinearLayout>

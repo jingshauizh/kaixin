@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper android:id="@id/fliper" android:background="@drawable/bump_dialog_bg" android:layout_width="300.0dip" android:layout_height="260.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/matching_layout" android:padding="4.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ImageView android:id="@id/cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/bump_dialog_close_icon" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ProgressBar android:id="@id/matching_progress_bar" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginBottom="20.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray2" android:id="@id/matching_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bump_matching" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/confirm_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/confirm_logo_layout" android:background="@drawable/bump_headbg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="35.0dip" android:layout_marginBottom="35.0dip">
+            <ImageView android:id="@id/other_logo" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/big_head_icon" android:scaleType="fitXY" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textColor="@drawable/black" android:id="@id/other_name_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="16.0sp" android:textColor="@drawable/black" android:id="@id/other_relation_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bump_relation_tips1" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip">
+            <Button android:textSize="20.0sp" android:textColor="@drawable/white" android:id="@id/confirm_yes" android:background="@drawable/bump_red_button" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/yes" />
+            <Button android:textSize="20.0sp" android:textColor="@drawable/black" android:id="@id/confirm_no" android:background="@drawable/bump_gray_button" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="@string/no" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:id="@id/waiting_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/action_btn">
+            <LinearLayout android:id="@id/waiting_other_head_layout" android:background="@drawable/bump_headbg" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/waiting_other_logo" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/big_head_icon" android:scaleType="fitXY" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="50.0dip">
+                <ProgressBar android:id="@id/waiting_progress_bar" android:layout_width="20.0dip" android:layout_height="20.0dip" android:layout_marginRight="8.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" />
+                <TextView android:textSize="16.0sp" android:textColor="@drawable/gray2" android:id="@id/waiting_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bump_waiting" />
+            </LinearLayout>
+        </LinearLayout>
+        <Button android:textSize="20.0sp" android:textColor="@drawable/black" android:id="@id/action_btn" android:background="@drawable/bump_gray_button" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/cancel" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/exchange_success_layout" android:padding="0.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/other_card_layout" android:background="@drawable/bump_dialog_card_bg" android:padding="8.0dip" android:layout_width="fill_parent" android:layout_height="150.0dip">
+            <LinearLayout android:id="@id/head_logo_layout" android:background="@drawable/bump_headbg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true">
+                <ImageView android:id="@id/success_other_logo" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/big_head_icon" android:scaleType="fitXY" />
+            </LinearLayout>
+            <TextView android:textSize="18.0sp" android:textColor="@drawable/black" android:ellipsize="end" android:id="@id/succ_other_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:singleLine="true" android:layout_toRightOf="@id/head_logo_layout" android:layout_alignParentTop="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/succ_other_post" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_toRightOf="@id/succ_other_name" android:layout_alignBaseline="@id/succ_other_name" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/succ_other_city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/succ_other_name" android:layout_alignLeft="@id/succ_other_name" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/succ_other_company" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/succ_other_city" android:layout_alignLeft="@id/succ_other_name" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/succ_other_email" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/succ_other_company" android:layout_alignLeft="@id/succ_other_name" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/succ_other_phone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/succ_other_email" android:layout_alignLeft="@id/succ_other_name" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/succ_other_mobile" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/succ_other_phone" android:layout_alignLeft="@id/succ_other_name" />
+        </RelativeLayout>
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/succ_tips_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/black" android:id="@id/succ_other_name_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/black" android:id="@id/succ_relatioon_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/bump_relation_tips2" />
+            <Button android:textSize="20.0sp" android:textColor="@drawable/white" android:id="@id/succ_ok" android:background="@drawable/bump_red_button" android:layout_width="180.0dip" android:layout_height="wrap_content" android:text="@string/ok" />
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:id="@id/no_matched_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/no_result_action_btn" android:layout_centerVertical="true">
+            <TextView android:textSize="16.0sp" android:textColor="@drawable/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bump_no_match_1" />
+            <TextView android:textSize="16.0sp" android:textColor="@drawable/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bump_no_match_2" />
+        </LinearLayout>
+        <Button android:textSize="20.0sp" android:textColor="@drawable/black" android:id="@id/no_result_action_btn" android:background="@drawable/bump_gray_button" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/ok" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:onClick="onNoResultOKBtn" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:id="@id/other_cancel_layout" android:layout_width="wrap_content" android:layout_height="fill_parent">
+        <LinearLayout android:background="@drawable/bump_headbg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="25.0dip" android:layout_marginBottom="40.0dip">
+            <ImageView android:id="@id/other_cancel_logo" android:layout_width="60.0dip" android:layout_height="60.0dip" android:src="@drawable/big_head_icon" android:scaleType="fitXY" />
+        </LinearLayout>
+        <TextView android:textSize="16.0sp" android:textColor="@drawable/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="40.0dip" android:text="@string/bump_other_cancel" />
+        <Button android:textSize="20.0sp" android:textColor="@drawable/black" android:id="@id/cancel_ok_btn" android:background="@drawable/bump_gray_button" android:layout_width="180.0dip" android:layout_height="wrap_content" android:text="@string/ok" />
+    </LinearLayout>
+    <RelativeLayout android:gravity="center_horizontal" android:id="@id/timeout_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="16.0sp" android:textColor="@drawable/black" android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="80.0dip" android:text="@string/bump_timeout" android:layout_alignParentTop="true" />
+        <Button android:textSize="20.0sp" android:textColor="@drawable/black" android:id="@id/timeout_ok_btn" android:background="@drawable/bump_gray_button" android:layout_width="180.0dip" android:layout_height="wrap_content" android:layout_marginBottom="20.0dip" android:text="@string/ok" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</ViewFlipper>

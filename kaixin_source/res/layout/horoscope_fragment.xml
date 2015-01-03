@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_title_bar_horo" layout="@layout/kaixin_title_bar" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/yun_background_new" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/horoscope_choose_click" android:background="@drawable/horoscope_folder" android:padding="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip">
+            <ImageView android:id="@id/horoscope_icon" android:background="@drawable/yun_profile_background" android:padding="2.0dip" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_margin="2.0dip" android:scaleType="center" />
+            <LinearLayout android:orientation="vertical" android:paddingLeft="14.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:id="@id/horoscope_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" style="@style/horoscope_text" />
+                <TextView android:id="@id/horoscope_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" style="@style/horoscope_text" />
+            </LinearLayout>
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="6.0dip" android:src="@drawable/global_icon_enter_new" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+            <Button android:id="@id/today_btn" android:background="@drawable/folder_choose" android:paddingRight="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="今日运势" android:layout_weight="1.0" style="@style/horoscope_text" />
+            <Button android:id="@id/tomorrow_btn" android:background="@drawable/folder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="明日运势" android:layout_weight="1.0" style="@style/horoscope_text" />
+            <Button android:id="@id/week_btn" android:background="@drawable/folder" android:paddingLeft="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="本周运势" android:layout_weight="1.0" style="@style/horoscope_text" />
+        </LinearLayout>
+        <ListView android:id="@id/horoscope_result_listview" android:background="#00000000" android:visibility="gone" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:cacheColorHint="#00000000" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/cloud_album_loading_layout" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_below="@id/cloud_album_info_layout" android:layout_centerInParent="true">
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/recomment_app_ProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+            <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/recomment_app_progress_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

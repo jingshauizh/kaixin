@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/chat_detail_list_item" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/chat_initiator" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="56.0dip" android:layout_marginBottom="5.0dip">
+        <RelativeLayout android:id="@id/chat_other_logo_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true">
+            <ImageView android:id="@id/chat_initiator_icon" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/head_default" android:layout_centerInParent="true" />
+            <ImageView android:background="@drawable/head_border_chat" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/chat_content" android:background="@drawable/chat_leftbubble_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/chat_other_logo_layout" android:layout_alignTop="@id/chat_other_logo_layout">
+            <RelativeLayout android:id="@id/chat_content_title" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/blue_link" android:ellipsize="end" android:id="@id/chat_initiator_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="sdfadfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfa" android:singleLine="true" android:layout_toLeftOf="@id/chat_initiate_time" android:layout_alignParentLeft="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/chat_initiate_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="2011-07-14 18:09:03" android:singleLine="true" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <com.kaixin001.view.KXIntroView android:textSize="16.0sp" android:textColor="@drawable/gray5" android:id="@id/chat_content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/chat_content_title" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:layout_gravity="right" android:orientation="horizontal" android:id="@id/chat_responsor" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="56.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip">
+        <RelativeLayout android:id="@id/chat_my_logo_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+            <ImageView android:id="@id/chat_responsor_icon" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/head_default" android:layout_centerInParent="true" />
+            <ImageView android:background="@drawable/head_border_chat" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/chat_respopnsor_content" android:background="@drawable/chat_rightbubble_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/chat_my_logo_layout" android:layout_alignTop="@id/chat_my_logo_layout">
+            <RelativeLayout android:id="@id/chat_responsor_content_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip">
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:id="@id/chat_responsor_time" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:minWidth="60.0dip" android:text="08-23 12:34:56" android:singleLine="true" android:layout_alignParentRight="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/blue_link" android:ellipsize="end" android:id="@id/chat_responsor_name" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:text="@string/me" android:singleLine="true" android:layout_alignParentLeft="true" />
+            </RelativeLayout>
+            <com.kaixin001.view.KXIntroView android:textSize="16.0sp" android:textColor="@drawable/gray5" android:id="@id/chat_responsor_content_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_below="@id/chat_responsor_content_title" />
+        </RelativeLayout>
+        <ProgressBar android:id="@id/chat_sending_probar" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_marginRight="10.0dip" android:indeterminateDrawable="@drawable/chat_sending_progress_bar_drawable" android:layout_toLeftOf="@id/chat_respopnsor_content" android:layout_alignParentTop="true" style="?android:attr/progressBarStyleSmall" />
+    </RelativeLayout>
+</LinearLayout>

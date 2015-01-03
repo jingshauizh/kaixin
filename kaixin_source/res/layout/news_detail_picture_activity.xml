@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/black" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.kaixin001.view.KXImageView android:layout_gravity="center" android:id="@id/news_detail_picture" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <ImageView android:id="@id/news_detail_picture_btn_download" android:background="@drawable/btn_save_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/news_detail_picture_btn_deleted" android:background="@drawable/btn_delete_selector" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/news_detail_picture_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <ProgressBar android:layout_gravity="bottom" android:id="@id/news_detail_picture_progress_item_ProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="80.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable_white_circle" />
+    </LinearLayout>
+</RelativeLayout>

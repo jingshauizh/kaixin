@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_gravity="center_vertical" android:id="@id/layout_view_more_item" android:duplicateParentState="true" android:layout_width="fill_parent" android:layout_height="44.0dip">
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/probar_more" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="34.0dip" android:layout_marginRight="10.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@drawable/white" android:layout_gravity="center_vertical" android:id="@id/tv_more" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/menu_item_more_apps" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

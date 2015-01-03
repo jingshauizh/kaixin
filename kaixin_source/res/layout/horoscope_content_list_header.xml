@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+        <TextView android:id="@id/today_horoscope_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="今日运势：" style="@style/horoscope_text" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/today_horoscope_star" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/horoscope_folder" android:padding="3.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" android:layout_marginBottom="6.0dip">
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/star_mark1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="爱    情：" style="@style/horoscope_text" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/love_horoscope_star" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="健    康：" style="@style/horoscope_text" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/health_horoscope_star" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/star_mark2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="财    运：" style="@style/horoscope_text" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/money_horoscope_star" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="工    作：" style="@style/horoscope_text" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/job_horoscope_star" android:paddingLeft="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/star_match1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="贵人星座：" style="@style/horoscope_text" />
+            <TextView android:id="@id/good_star" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="天蝎座" android:layout_weight="1.0" style="@style/horoscope_text" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="小人星座：" style="@style/horoscope_text" />
+            <TextView android:id="@id/bad_star" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:layout_weight="1.0" style="@style/horoscope_text" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/star_match2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="契合星座：" style="@style/horoscope_text" />
+            <TextView android:id="@id/match_star" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="黄色" android:layout_weight="1.0" style="@style/horoscope_text" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="14.0dip" android:layout_marginBottom="14.0dip">
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="幸运色：" style="@style/horoscope_text" />
+                <TextView android:id="@id/lucky_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="黄色" android:layout_weight="1.0" style="@style/horoscope_text" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="幸运数：" style="@style/horoscope_text" />
+                <TextView android:id="@id/lucky_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2" android:layout_weight="1.0" style="@style/horoscope_text" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

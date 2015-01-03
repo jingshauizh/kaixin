@@ -2255,7 +2255,8 @@ public class Protocol
 
   public String makeLookNewsRequest(Context paramContext, boolean paramBoolean, String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7)
   {
-    StringBuffer localStringBuffer = new StringBuffer();
+    //StringBuffer localStringBuffer = new StringBuffer();
+    StringBuffer localStringBuffer = new StringBuffer("http://ksa2.kaixin001.com");
     localStringBuffer.append("/home/publicfeed.php");
     if (!TextUtils.isEmpty(paramString1))
     {

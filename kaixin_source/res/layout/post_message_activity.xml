@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:orientation="vertical" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ScrollView android:background="@drawable/global_input_box_focus" android:paddingBottom="5.0dip" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="10.0dip" android:cacheColorHint="@drawable/transparent">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:background="@drawable/white" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="10.0dip">
+                        <TextView android:textSize="16.0dip" android:textColor="@drawable/gray1" android:layout_gravity="top" android:layout_width="60.0dip" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:text="@string/post_message_receiver" />
+                        <LinearLayout android:orientation="vertical" android:id="@id/post_message_receiver_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                        <Button android:gravity="center" android:layout_gravity="bottom" android:id="@id/post_message_add_receiver" android:background="@drawable/write_function_addfriend_button" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <TextView android:background="@drawable/gray1" android:layout_width="fill_parent" android:layout_height="1.0px" />
+                    <LinearLayout android:orientation="horizontal" android:background="@drawable/white" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="10.0dip">
+                        <TextView android:textSize="16.0dip" android:textColor="@drawable/gray1" android:layout_gravity="top" android:id="@id/post_message_content_hint" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/post_message_content" />
+                        <EditText android:gravity="top" android:id="@id/post_message_content_view" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="100.0dip" android:maxLength="600" android:inputType="textMultiLine" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+            <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/post_message_progress_view" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ProgressBar android:layout_gravity="center_vertical" android:id="@id/embed_progress_item_ProgressBar" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+                <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/embed_progress_item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/message_sending" />
+            </LinearLayout>
+        </FrameLayout>
+        <RelativeLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:id="@id/post_message_bottom_layout" android:background="@drawable/global_bar_backgroud_bottom_no_edge" android:paddingTop="2.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="48.0dip">
+            <ImageView android:id="@id/post_message_add_smiley" android:background="@drawable/title_mbtn_pressed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/globle_btn_emoji_botton" />
+        </RelativeLayout>
+        <com.kaixin001.view.FaceKeyboardView android:id="@id/face_keyboard_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

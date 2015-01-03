@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@drawable/gray5" android:gravity="center" android:id="@id/type_title" android:layout_width="fill_parent" android:layout_height="35.0dip" android:text="每日任务" />
+    <RelativeLayout android:id="@id/mission_title_layout" android:background="@drawable/medal_title_background_12" android:layout_width="fill_parent" android:layout_height="30.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:id="@id/title_condition" android:layout_width="90.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="条件" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:id="@id/title_exp" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="经验值" android:layout_toRightOf="@id/title_condition" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:id="@id/title_upper_level" android:layout_width="60.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="每日上限" android:layout_toRightOf="@id/title_exp" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:id="@id/title_info" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="说明" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/mission_content_layout" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray19" android:gravity="left|center" android:id="@id/tv_days" android:layout_width="90.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="连续登录1天" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray19" android:gravity="center" android:id="@id/tv_exp" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="+5" android:layout_toRightOf="@id/tv_days" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray19" android:gravity="center" android:id="@id/daily_upper_limit" android:layout_width="60.0dip" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:text="30" android:layout_toRightOf="@id/tv_exp" android:layout_centerVertical="true" />
+        <RelativeLayout android:id="@id/explain_layout" android:layout_width="70.0dip" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:layout_alignParentRight="true">
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray19" android:gravity="center" android:id="@id/tv_explain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="未完成" android:layout_centerInParent="true" />
+            <ImageView android:id="@id/iv_explain" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView android:textSize="16.0sp" android:textColor="@drawable/gray5" android:gravity="center" android:id="@id/type_grade_title" android:paddingTop="3.0dip" android:layout_width="fill_parent" android:layout_height="38.0dip" android:text="升职说明" />
+    <RelativeLayout android:id="@id/grade_title_layout" android:background="@drawable/medal_title_background_12" android:layout_width="fill_parent" android:layout_height="30.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:id="@id/tv_job" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="职位" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:id="@id/tv_need_grade" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="28.0dip" android:text="所需等级" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/grade_content_layout" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray19" android:gravity="center" android:id="@id/tv_office" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="24.0dip" android:text="实习生" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray19" android:gravity="center" android:id="@id/tv_grade_value" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginRight="28.0dip" android:text="7" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ImageView android:id="@id/bottom_divide_line" android:background="@drawable/dcd6d0" android:layout_width="fill_parent" android:layout_height="1.0px" />
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/kaixin_desktop_title_bar">
+        <LinearLayout android:orientation="vertical" android:id="@id/write_diary_activity_main_Layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/write_weibo_location_layout">
+            <LinearLayout android:orientation="horizontal" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginRight="10.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="@drawable/gray1" android:layout_gravity="center_vertical" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/write_diary_title" />
+                <EditText android:id="@id/write_diary_title_view" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLength="63" />
+            </LinearLayout>
+            <TextView android:background="@drawable/gray1" android:layout_width="fill_parent" android:layout_height="1.0px" />
+            <LinearLayout android:orientation="horizontal" android:background="@drawable/global_input_box_focus" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="6.0dip" android:layout_marginRight="6.0dip">
+                <TextView android:textSize="16.0dip" android:textColor="@drawable/gray1" android:layout_gravity="top" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/write_diary_content" />
+                <com.kaixin001.view.KXEditTextView android:gravity="top" android:id="@id/write_diary_content_view" android:background="@null" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minHeight="200.0dip" android:maxLength="600" android:inputType="textMultiLine" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.kaixin001.view.LocationMarkerView android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/write_weibo_location_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginBottom="5.0dip" android:layout_above="@id/bottom_btns_layout1" />
+        <LinearLayout android:orientation="vertical" android:id="@id/bottom_btns_layout1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <LinearLayout android:orientation="horizontal" android:id="@id/bottom_btns_layout" android:background="@drawable/global_bar_backgroud_bottom_no_edge" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <ImageView android:id="@id/write_diary_add_smiley" android:background="@drawable/title_mbtn_pressed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:src="@drawable/globle_btn_emoji_botton" android:contentDescription="@string/dummy" />
+                <ImageView android:id="@id/write_diary_add_picture" android:background="@drawable/title_mbtn_pressed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:src="@drawable/g_photo_btn" android:contentDescription="@string/dummy" />
+                <ImageView android:id="@id/write_diary_add_gps" android:background="@drawable/title_mbtn_pressed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="0.0dip" android:src="@drawable/g_lbs_btn" android:contentDescription="@string/dummy" />
+            </LinearLayout>
+            <com.kaixin001.view.FaceKeyboardView android:id="@id/face_keyboard_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:id="@id/write_diary_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="180.0dip" android:layout_above="@id/write_weibo_bottom_left_layout">
+        <ProgressBar android:layout_gravity="center_vertical" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/write_diary_progress_item_text" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

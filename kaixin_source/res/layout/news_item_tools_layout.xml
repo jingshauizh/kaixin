@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/news_item_layout_location" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/news_item_img_location_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/location_icon" />
+        <TextView android:textSize="12.0sp" android:textColor="@drawable/gray13" android:ellipsize="end" android:id="@id/news_item_txt_location_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="test" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/news_item_layout_comment_info_layout" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginTop="4.0dip" android:layout_below="@id/news_item_layout_location">
+        <View android:id="@id/news_item_line_layoutA" android:background="#ffefefef" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <View android:id="@id/news_item_line_layoutB" android:background="#fffcfcfc" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_below="@id/news_item_line_layoutA" />
+        <TextView android:textSize="12.0sp" android:textColor="@drawable/gray13" android:ellipsize="end" android:id="@id/news_item_client_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="190.0dip" android:text="Android Client" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_toRightOf="@id/news_item_micon" android:layout_centerVertical="true" />
+        <RelativeLayout android:id="@id/news_item_layout_comment_info" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <RelativeLayout android:id="@id/news_item_layout_comment_up_info" android:background="@drawable/news_item_bottom_bg_left" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                <ImageView android:id="@id/news_item_img_up_icon" android:paddingTop="1.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/icon_praise" android:layout_centerVertical="true" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/hint_color" android:id="@id/news_item_up_text" android:layout_width="28.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="5人赞" android:layout_toRightOf="@id/news_item_img_up_icon" android:layout_centerVertical="true" />
+            </RelativeLayout>
+            <LinearLayout android:id="@id/news_item_layout_comment_forward_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/news_item_layout_comment_up_info" android:layout_centerVertical="true">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/news_item_img_forward_icon" android:paddingTop="1.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/icon_forwarding" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/hint_color" android:layout_gravity="center_vertical" android:id="@id/news_item_forward_text" android:layout_width="28.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="5人转发" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/news_item_img_forward_dividing_line1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dividing_line" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/news_item_layout_comment_comment_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/news_item_layout_comment_forward_info" android:layout_centerVertical="true">
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/news_item_img_comment_icon" android:paddingTop="1.0px" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/icon_comment" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/hint_color" android:layout_gravity="center_vertical" android:id="@id/news_item_comment_text" android:layout_width="28.0dip" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:text="16条评论" />
+                <ImageView android:layout_gravity="center_vertical" android:id="@id/news_item_img_comment_dividing_line1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/dividing_line" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/news_item_img_comment_dividing_line" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/dividing_line" android:layout_toLeftOf="@id/news_item_layout_comment_comment_info" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

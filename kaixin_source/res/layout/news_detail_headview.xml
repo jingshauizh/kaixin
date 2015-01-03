@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#fffffdfd" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/news_detail_head_user_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="9.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentTop="true">
+        <ImageView android:id="@id/news_detail_head_user_logo" android:layout_width="33.0dip" android:layout_height="33.0dip" android:layout_marginLeft="1.0dip" android:layout_marginTop="1.0dip" />
+        <ImageView android:id="@id/news_detail_head_user_logo_back" android:background="@drawable/gifts_addfriend_head" android:layout_width="35.0dip" android:layout_height="35.0dip" />
+        <com.kaixin001.view.KXIntroView android:textSize="16.0sp" android:textColor="#ff7ba8cf" android:id="@id/news_detail_head_user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:maxWidth="160.0dip" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_toRightOf="@id/news_detail_head_user_logo" android:layout_centerVertical="true" />
+        <TextView android:textSize="11.0sp" android:textColor="@drawable/gray13" android:id="@id/news_detail_head_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:singleLine="true" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/news_detail_head_content_layout" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/news_detail_head_user_layout">
+        <TextView android:textSize="14.0sp" android:textColor="#ff7ba8cf" android:id="@id/news_detail_head_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" />
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/news_detail_head_location_icon" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/location_icon" />
+            <com.kaixin001.view.KXIntroView android:textSize="15.0sp" android:textColor="@drawable/gray4" android:id="@id/news_detail_head_place" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_weight="1.0" />
+        </LinearLayout>
+        <com.kaixin001.view.KXIntroView android:textSize="15.0sp" android:textColor="@drawable/gray4" android:id="@id/news_detail_head_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <com.kaixin001.view.KXFrameImageView android:layout_gravity="center_horizontal" android:id="@id/news_detail_head_video_pic" android:layout_width="226.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:scaleType="centerCrop" android:maxHeight="170.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/news_detail_head_pic_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.kaixin001.view.KXFrameImageView android:id="@id/news_detail_head_pic" android:layout_width="226.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:scaleType="fitStart" android:maxHeight="302.0dip" android:layout_centerHorizontal="true" />
+                <View android:id="@id/news_detail_head_img_long_space" android:visibility="gone" android:layout_width="1.0px" android:layout_height="8.0dip" android:layout_below="@id/news_detail_head_pic" />
+                <LinearLayout android:id="@id/news_detail_head_img_long" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+                    <ImageView android:background="@drawable/global_details_photo_l" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    <ImageView android:background="@drawable/global_details_photo_m" android:layout_width="226.0dip" android:layout_height="wrap_content" />
+                    <ImageView android:background="@drawable/global_details_photo_r" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                </LinearLayout>
+            </RelativeLayout>
+            <View android:id="@id/news_detail_head_media_space" android:layout_width="1.0px" android:layout_height="8.0dip" android:layout_below="@id/news_detail_head_pic_layout" />
+            <View android:id="@id/news_detail_head_media_space1" android:layout_width="1.0px" android:layout_height="8.0dip" android:layout_below="@id/news_detail_head_media_space" />
+            <com.kaixin001.view.media.KXMediaView android:id="@id/news_detail_head_media" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <com.kaixin001.view.KXFrameImageView android:layout_gravity="center_horizontal" android:id="@id/news_detail_head_map_pic" android:layout_width="226.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:scaleType="centerCrop" android:maxHeight="170.0dip" />
+    </LinearLayout>
+    <LinearLayout android:id="@id/news_detail_head_subcontent_layout" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/news_detail_head_content_layout">
+        <ImageView android:id="@id/news_detail_head_subcontent_line" android:background="@drawable/news_detail_line" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_weight="1.0">
+            <com.kaixin001.view.KXIntroView android:textSize="14.0sp" android:textColor="#ff7ba8cf" android:id="@id/news_detail_head_sub_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="3.0dip" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+            <com.kaixin001.view.KXIntroView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:id="@id/news_detail_head_sub_content" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <com.kaixin001.view.KXFrameImageView android:layout_gravity="center_horizontal" android:id="@id/news_detail_head_sub_video_pic" android:layout_width="226.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:scaleType="centerCrop" android:maxHeight="170.0dip" />
+            <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:id="@id/news_detail_head_sub_pic_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <com.kaixin001.view.KXFrameImageView android:id="@id/news_detail_head_sub_pic" android:layout_width="226.0dip" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:scaleType="fitStart" android:maxHeight="302.0dip" android:layout_centerHorizontal="true" />
+                    <View android:id="@id/news_detail_head_sub_img_long_space" android:visibility="gone" android:layout_width="1.0px" android:layout_height="8.0dip" android:layout_below="@id/news_detail_head_pic" />
+                    <LinearLayout android:id="@id/news_detail_head_sub_img_long" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+                        <ImageView android:background="@drawable/global_details_photo_l" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                        <ImageView android:background="@drawable/global_details_photo_m" android:layout_width="226.0dip" android:layout_height="wrap_content" />
+                        <ImageView android:background="@drawable/global_details_photo_r" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <View android:id="@id/news_detail_head_sub_media_space" android:layout_width="1.0px" android:layout_height="8.0dip" android:layout_below="@id/news_detail_head_sub_pic_layout" />
+                <View android:id="@id/news_detail_head_sub_media_space1" android:layout_width="1.0px" android:layout_height="8.0dip" android:layout_below="@id/news_detail_head_sub_media_space" />
+                <com.kaixin001.view.media.KXMediaView android:id="@id/news_detail_head_sub_media" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/news_detail_head_friends_scrollview" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/news_detail_head_subcontent_layout">
+        <ImageView android:background="@drawable/global_top_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <HorizontalScrollView android:orientation="horizontal" android:scrollbars="none" android:fadingEdge="horizontal" android:fadingEdgeLength="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+            <LinearLayout android:layout_gravity="left|center" android:orientation="horizontal" android:id="@id/news_detail_head_friends_list" android:paddingLeft="8.0dip" android:fadingEdge="none" android:fadingEdgeLength="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        </HorizontalScrollView>
+    </FrameLayout>
+</RelativeLayout>

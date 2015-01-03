@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/news_item_repaste" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="14.0sp" android:textColor="@drawable/repost_link" android:id="@id/news_item_repost" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:singleLine="true" android:drawableLeft="@drawable/repost_repastedefault" android:drawablePadding="8.0dip" />
+    <TextView android:textSize="12.0sp" android:textColor="@drawable/gray14" android:ellipsize="middle" android:id="@id/news_item_repost_ext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="34.0dip" android:layout_marginRight="10.0dip" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+    <ImageView android:id="@id/news_item_repost_img" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" android:src="@drawable/dotline_repaste" android:scaleType="fitXY" />
+</LinearLayout>

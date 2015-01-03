@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background_default" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/phone_number_title" layout="@layout/kaixin_title_bar" />
+    <RelativeLayout android:layout_gravity="center_horizontal" android:id="@id/write_phone_num_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="28.5dip">
+        <EditText android:textSize="14.0sp" android:textColor="@drawable/gray5" android:textColorHint="@drawable/gray13" android:id="@id/write_phone_number" android:background="@drawable/globle_input_bg" android:paddingLeft="8.0dip" android:paddingBottom="8.0dip" android:layout_width="280.0dip" android:layout_height="31.0dip" android:hint="填写手机号码" android:singleLine="true" android:maxLength="300" android:layout_centerHorizontal="true" android:inputType="phone" />
+        <ImageView android:id="@id/delete_tip_img" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/global_btn_delete" android:layout_alignRight="@id/write_phone_number" android:layout_alignBottom="@id/write_phone_number" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="12.0sp" android:textColor="@drawable/gray13" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="19.0dip" android:layout_marginTop="7.0dip" android:text="@string/phone_register_tip" />
+    <Button android:enabled="false" android:textSize="18.0sp" android:textColor="@drawable/btn_unenabled" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/next_step_btn" android:background="@drawable/login_btn" android:layout_width="282.5dip" android:layout_height="wrap_content" android:layout_marginTop="23.0dip" android:text="@string/phone_register_next_step" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/checkbox_admit_items" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="19.5dip" android:layout_marginTop="13.0dip">
+        <ImageView android:id="@id/admit_items_check" android:layout_width="26.0dip" android:layout_height="wrap_content" android:checked="true" android:src="@drawable/global_checkbox_checked" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray13" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_register_admit_article" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/blue_link3" android:layout_gravity="center_vertical" android:id="@id/kaixin_items" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/phone_register_kaixin_items" />
+    </LinearLayout>
+</LinearLayout>

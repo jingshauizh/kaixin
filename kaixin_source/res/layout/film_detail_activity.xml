@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/film_detail_title_bar" layout="@layout/kaixin_title_bar" />
+    <RelativeLayout android:id="@id/film_detail_main_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <TextView android:textStyle="bold" android:textColor="@drawable/gray2" android:gravity="center" android:id="@id/film_detail_empty_label" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:layout_centerInParent="true" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/movie_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <ImageView android:background="@drawable/movie_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                <ImageView android:background="@drawable/movie_bg_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <com.kaixin001.view.KXListView android:id="@id/film_detail_listview" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@null" />
+                <View android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/film_tab2_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <com.kaixin001.view.KXTopTabHost2 android:id="@id/film_tab2" android:background="@drawable/transparent" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/film_detail_loading" android:background="@drawable/kaixin_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ProgressBar android:layout_gravity="center_vertical" android:id="@id/film_detail_loading_progressbar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+                <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/film_detail_loading_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/film_detail_bottom_btn_layout" android:background="#fffafafa" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip">
+        <View android:background="#ffe3e3e3" android:layout_width="fill_parent" android:layout_height="2.0px" />
+        <Button android:textSize="14.0dip" android:textColor="@drawable/white" android:gravity="center" android:id="@id/film_detail_bottom_btn" android:background="@drawable/login_btn_m" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip" android:text="@string/film_want_to" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

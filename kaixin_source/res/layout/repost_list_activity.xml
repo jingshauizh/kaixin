@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" android:layout_alignParentTop="true" layout="@layout/kaixin_title_bar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_repost_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/layout_bottom_bar" android:layout_below="@id/kaixin_desktop_title_bar">
+        <com.kaixin001.view.KXListView android:id="@id/repost_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@drawable/gray1" android:dividerHeight="1.0px" android:footerDividersEnabled="true" />
+        <View android:background="@drawable/gray1" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:id="@id/embed_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <ProgressBar android:id="@id/embed_progress_item_ProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+                <TextView android:textSize="16.0sp" android:textColor="@drawable/gray1" android:id="@id/embed_progress_item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading_more_repost" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+    <RelativeLayout android:id="@id/layout_bottom_bar" android:background="@drawable/bottombg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="44.0dip" android:layout_alignParentBottom="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button android:textColor="@drawable/black" android:id="@id/bottom_bar_button" android:background="@drawable/friends_repost_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

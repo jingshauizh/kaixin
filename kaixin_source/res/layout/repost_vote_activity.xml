@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <ScrollView android:paddingBottom="10.0dip" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@drawable/transparent" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:id="@id/repost_vote_total_num_des" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+            <LinearLayout android:orientation="vertical" android:id="@id/repost_vote_anwser_list" android:background="@drawable/table_bg" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <LinearLayout android:orientation="vertical" android:id="@id/repost_vote_tag_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:id="@id/repost_vote_friend_opinion_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/repost_vote_friend_opinion" />
+            <LinearLayout android:orientation="vertical" android:id="@id/repost_vote_result_list" android:background="@drawable/table_bg" android:paddingLeft="0.0dip" android:paddingTop="2.0dip" android:paddingRight="0.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:id="@id/repost_vote_input_layout" android:background="@drawable/commentinputbg" android:paddingLeft="4.0dip" android:paddingRight="4.0dip" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="38.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textColor="@drawable/gray2" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:background="@drawable/edit_input_bg" android:paddingLeft="14.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/input_new_tag" android:lines="1" android:layout_weight="1.0" />
+    </LinearLayout>
+</LinearLayout>

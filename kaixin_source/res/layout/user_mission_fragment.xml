@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/user_activitiy_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:background="@drawable/medal_activity_background_12" android:paddingLeft="34.0dip" android:paddingTop="10.0dip" android:paddingRight="34.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="8.0dip">
+            <TextView android:textSize="12.0sp" android:textColor="@drawable/gray5" android:gravity="center_horizontal" android:id="@id/tv_activity_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+            <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:gravity="left" android:id="@id/tv_activity_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_below="@id/tv_activity_title" android:layout_alignParentLeft="true" android:lineSpacingExtra="2.0dip" />
+            <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:gravity="left" android:id="@id/start_end_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_below="@id/tv_activity_content" android:layout_alignParentLeft="true" />
+        </RelativeLayout>
+        <ImageView android:background="@drawable/medal_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.5dip" android:layout_marginTop="5.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@drawable/kaixin_background" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/lv_mission" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:listSelector="@*android:color/transparent" android:cacheColorHint="@*android:color/transparent" android:divider="@null" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/user_mission_waitlayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_marginTop="10.0dip">
+        <ProgressBar android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+    </LinearLayout>
+    <View android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

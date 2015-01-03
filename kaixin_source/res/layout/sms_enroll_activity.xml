@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/home_title_bar" layout="@layout/kaixin_title_bar" />
+    <ScrollView android:background="@drawable/gray8" android:paddingBottom="10.0dip" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@drawable/transparent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/gray5" android:id="@id/textView1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="14.0dip" android:text="@string/sms_enroll_tv_top1" />
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/gray5" android:id="@id/textView2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="14.0dip" android:text="@string/sms_enroll_tv_top2" />
+            <RelativeLayout android:gravity="center" android:id="@id/relativeLayout1" android:background="@drawable/sms_bg" android:layout_width="fill_parent" android:layout_height="90.0dip" android:layout_marginLeft="14.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="14.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <Button android:textSize="24.0sp" android:textStyle="bold" android:textColor="@drawable/kaixin_text_color_white" android:gravity="center" android:id="@id/btnCmEnroll" android:background="@drawable/login_pwd_other_btn" android:layout_width="300.0dip" android:layout_height="wrap_content" android:text="@string/sms_enroll_btn_cm" android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+            <TextView android:textSize="16.0sp" android:textColor="@drawable/gray2" android:id="@id/textView6" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="14.0dip" android:text="@string/sms_enroll_tv_bottum1" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

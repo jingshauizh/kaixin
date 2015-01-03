@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_bar" android:layout_alignParentTop="true" layout="@layout/image_filter_title_bar" />
+    <com.kaixin001.view.KXHorizontalScrollView android:id="@id/bottom" android:background="@drawable/image_bottombannerbg" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame1" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image1" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe1_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_cute" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame2" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image2" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe2_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_quick_pic" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame3" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image3" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe3_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_envelope" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame4" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image4" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe4_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_camera" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame5" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image5" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe5_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_mist" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame6" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image6" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe6_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_love" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame7" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image7" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe7_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_stamp" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame8" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image8" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe8_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_transparent" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame9" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image9" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe9_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_black" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/frame10" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:id="@id/kx_frame_image10" android:background="@drawable/image_filter_banner_bg" android:padding="5.0dip" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/photoframe10_banner" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/image_film" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.kaixin001.view.KXHorizontalScrollView>
+    <LinearLayout android:gravity="center" android:background="@drawable/black_dot_bg" android:paddingLeft="25.0dip" android:paddingTop="20.0dip" android:paddingRight="25.0dip" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom" android:layout_below="@id/title_bar">
+        <ImageView android:id="@id/image_view" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="centerInside" />
+    </LinearLayout>
+</RelativeLayout>

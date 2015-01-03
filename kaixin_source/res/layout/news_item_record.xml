@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/kaixin_background" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/news_item_contentlayout" android:background="@drawable/news_item_background_new" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="7.0dip" android:layout_weight="1.0">
+        <include android:id="@id/news_item_top_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/news_item_top_layout" />
+        <RelativeLayout android:id="@id/news_item_content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/news_item_top_layout">
+            <com.kaixin001.view.KXIntroView android:textSize="15.0sp" android:textColor="@drawable/gray5" android:ellipsize="end" android:id="@id/news_item_content_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="1.0dip" android:lines="1" />
+            <com.kaixin001.view.KXIntroView android:textSize="15.0sp" android:textColor="@drawable/black_news" android:ellipsize="end" android:id="@id/news_item_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:lines="6" android:layout_below="@id/news_item_content_title" />
+            <RelativeLayout android:id="@id/news_item_content_imglist_scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/news_item_content">
+                <com.kaixin001.view.KXHorizontalScrollView android:orientation="horizontal" android:scrollbars="none" android:fadingEdge="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fillViewport="true" android:layout_centerHorizontal="true">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/news_item_content_imglist" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:fadingEdge="none" android:fadingEdgeLength="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                        <com.kaixin001.view.KXFrameImageView android:layout_width="216.0dip" android:layout_height="162.0dip" android:scaleType="centerCrop" />
+                        <com.kaixin001.view.KXFrameImageView android:layout_width="216.0dip" android:layout_height="162.0dip" android:layout_marginLeft="2.0dip" android:scaleType="centerCrop" />
+                    </LinearLayout>
+                </com.kaixin001.view.KXHorizontalScrollView>
+            </RelativeLayout>
+            <View android:id="@id/news_item_space" android:layout_width="1.0px" android:layout_height="144.0dip" android:layout_below="@id/news_item_content" />
+            <com.kaixin001.view.media.KXMediaView android:id="@id/news_item_media" android:paddingBottom="4.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="45.0dip" android:layout_below="@id/news_item_space" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/news_item_subcontent_layout" android:background="#fff5f5f5" android:paddingLeft="10.0dip" android:paddingTop="8.0dip" android:paddingRight="10.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="4.0dip" android:layout_below="@id/news_item_content_layout">
+            <com.kaixin001.view.KXIntroView android:textSize="15.0sp" android:textColor="@drawable/gray13" android:id="@id/news_item_sub_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" android:singleLine="true" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+            <com.kaixin001.view.KXIntroView android:textSize="15.0sp" android:textColor="@drawable/gray4" android:ellipsize="end" android:id="@id/news_item_sub_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:lines="6" android:layout_below="@id/news_item_sub_name" />
+            <RelativeLayout android:id="@id/news_item_sub_imglist_scrollview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/news_item_sub_content">
+                <com.kaixin001.view.KXHorizontalScrollView android:orientation="horizontal" android:scrollbars="none" android:fadingEdge="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:fillViewport="true" android:layout_centerHorizontal="true">
+                    <LinearLayout android:orientation="horizontal" android:id="@id/news_item_sub_imglist" android:fadingEdge="none" android:fadingEdgeLength="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginBottom="4.0dip">
+                        <com.kaixin001.view.KXFrameImageView android:layout_width="216.0dip" android:layout_height="162.0dip" android:scaleType="centerCrop" />
+                        <com.kaixin001.view.KXFrameImageView android:layout_width="216.0dip" android:layout_height="162.0dip" android:layout_marginLeft="2.0dip" android:scaleType="centerCrop" />
+                        <com.kaixin001.view.KXFrameImageView android:layout_width="216.0dip" android:layout_height="162.0dip" android:layout_marginLeft="2.0dip" android:scaleType="centerCrop" />
+                    </LinearLayout>
+                </com.kaixin001.view.KXHorizontalScrollView>
+            </RelativeLayout>
+            <View android:id="@id/news_item_sub_space" android:layout_width="1.0px" android:layout_height="144.0dip" android:layout_below="@id/news_item_sub_content" />
+            <com.kaixin001.view.media.KXMediaView android:id="@id/news_item_sub_media" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="27.0dip" android:layout_below="@id/news_item_sub_space" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <include android:id="@id/news_item_bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/news_item_subcontent_layout" layout="@layout/news_item_bottom_layout" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <include android:id="@id/home_title_bar" layout="@layout/kaixin_title_bar" />
+        <com.kaixin001.view.PullToRefreshView2 android:orientation="vertical" android:id="@id/pulldown_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.kaixin001.view.KXListView android:id="@id/home_news_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:scrollingCache="false" android:cacheColorHint="@drawable/transparent" android:divider="@null" android:dividerHeight="0.0px" android:fastScrollEnabled="false" android:headerDividersEnabled="false" />
+        </com.kaixin001.view.PullToRefreshView2>
+        <com.kaixin001.view.PullToRefreshView2 android:orientation="vertical" android:id="@id/pulldown_view2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.kaixin001.view.KXListView android:id="@id/home_people_info_list" android:background="@null" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:scrollingCache="false" android:cacheColorHint="@drawable/transparent" android:divider="@null" android:headerDividersEnabled="false" />
+        </com.kaixin001.view.PullToRefreshView2>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/home_waitlayout" android:layout_width="fill_parent" android:layout_height="180.0dip" android:layout_centerVertical="true">
+        <ProgressBar android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+    </LinearLayout>
+    <TextView android:id="@id/guide_view" android:background="@drawable/guide_friend" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <com.kaixin001.view.KXUGCView android:id="@id/home_news_ugc_overlay" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" />
+    <LinearLayout android:orientation="vertical" android:id="@id/guide_record" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:background="@drawable/black2" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <View android:background="@drawable/internal_guide_record" android:layout_width="fill_parent" android:layout_height="153.4dip" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/guide_change_logo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <View android:id="@id/guide_change_logo_top" android:background="@drawable/black2" android:layout_width="fill_parent" android:layout_height="0.0dip" />
+        <View android:background="@drawable/internal_guide_profile_avatar_frame" android:layout_width="fill_parent" android:layout_height="150.0dip" />
+        <View android:background="@drawable/black2" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_weight="1.0" />
+    </LinearLayout>
+    <View android:id="@id/guide_add_friend" android:background="@drawable/internal_guide_add_friend" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/upload_task_list_btn_bkg" android:layout_width="fill_parent" android:layout_height="138.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.kaixin001.view.KXViewPager android:id="@id/news_item_bar_view_pager" android:layout_width="fill_parent" android:layout_height="138.0dip" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/news_item_view_pager_index_line" android:fadingEdge="none" android:fadingEdgeLength="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
+    <ImageView android:id="@id/btn_clear_advert" android:visibility="gone" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip" android:src="@drawable/dynamic_banner_btn_close" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

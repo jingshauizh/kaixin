@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:background="@drawable/news_item_background_new" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="7.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <include android:id="@id/news_item_top_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/news_item_top_layout" />
+        <RelativeLayout android:id="@id/news_item_title_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/news_item_top_layout">
+            <com.kaixin001.view.KXIntroView android:textSize="14.599976sp" android:textColor="@drawable/gray5" android:id="@id/news_item_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="2.0dip" android:layout_marginRight="10.0dip" />
+            <RelativeLayout android:id="@id/news_item_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/news_item_content">
+                <LinearLayout android:orientation="horizontal" android:id="@id/news_item_friend_list" android:fadingEdge="horizontal" android:fadingEdgeLength="30.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="6.0dip" android:fillViewport="true">
+                    <include android:id="@id/news_item_friend_logo1" android:layout_marginRight="10.599976dip" layout="@layout/news_new_item_logo" />
+                    <include android:id="@id/news_item_friend_logo2" android:layout_marginRight="10.599976dip" layout="@layout/news_new_item_logo" />
+                    <include android:id="@id/news_item_friend_logo3" android:layout_marginRight="10.599976dip" layout="@layout/news_new_item_logo" />
+                    <include android:id="@id/news_item_friend_logo4" android:layout_marginRight="10.599976dip" layout="@layout/news_new_item_logo" />
+                    <include android:id="@id/news_item_friend_logo5" android:layout_marginRight="10.599976dip" layout="@layout/news_new_item_logo" />
+                    <ImageView android:layout_gravity="center_vertical" android:id="@id/news_item_friend_ellipsis" android:layout_width="35.0dip" android:layout_height="35.0dip" android:layout_marginLeft="4.0dip" android:layout_marginRight="10.599976dip" android:src="@drawable/global_icon_ellipsis" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/news_item_gift_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="4.0dip" android:layout_marginRight="10.0dip" android:fillViewport="true" android:layout_alignLeft="@id/news_item_content">
+                    <ImageView android:id="@id/news_item_gift_logo1" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginRight="13.0dip" android:src="@drawable/gifts_default_01" android:scaleType="fitXY" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/news_item_gift_logo2" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginRight="13.0dip" android:src="@drawable/gifts_default_01" android:scaleType="fitXY" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/news_item_gift_logo3" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginRight="13.0dip" android:src="@drawable/gifts_default_01" android:scaleType="fitXY" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/news_item_gift_logo4" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginRight="13.0dip" android:src="@drawable/gifts_default_01" android:scaleType="fitXY" android:layout_centerVertical="true" />
+                    <ImageView android:id="@id/news_item_gift_logo5" android:layout_width="46.0dip" android:layout_height="46.0dip" android:layout_marginRight="13.0dip" android:src="@drawable/gifts_default_01" android:scaleType="fitXY" android:layout_centerVertical="true" />
+                </LinearLayout>
+            </RelativeLayout>
+            <include android:id="@id/news_item_bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_below="@id/news_item_list" layout="@layout/news_item_bottom_layout" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

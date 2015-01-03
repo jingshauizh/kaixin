@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/desktopnoticebg" android:layout_width="wrap_content" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <LinearLayout android:gravity="center" android:id="@id/album_waitlayout" android:paddingBottom="20.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/kaixin_desktop_title_bar"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ProgressBar android:id="@id/album_loading_bar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@drawable/gray2" android:id="@id/album_txtempty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/downloading" />
+    </LinearLayout>
+    <com.kaixin001.view.KXListView android:id="@id/albumview_list" android:background="@drawable/desktopnoticebg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/desktopnoticebg" android:cacheColorHint="@drawable/transparent" android:divider="@drawable/desktopnoticebg" android:dividerHeight="0.0dip" android:layout_below="@id/kaixin_desktop_title_bar" />
+    <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:gravity="center" android:id="@id/tv_no_data" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/albumview_no_data" android:layout_below="@id/kaixin_desktop_title_bar" />
+</RelativeLayout>

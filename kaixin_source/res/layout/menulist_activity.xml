@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_left" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/layout_left_background" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+    <RelativeLayout android:background="@drawable/sidebar_bg_black" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/iv_user_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip">
+            <RelativeLayout android:id="@id/iv_logo_group" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+                <ImageView android:id="@id/iv_logo" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/head_default" android:layout_centerInParent="true" />
+                <ImageView android:background="@drawable/head_border_chat" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <TextView android:textSize="16.0sp" android:textColor="@drawable/white" android:id="@id/user_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:shadowColor="#a3000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_toRightOf="@id/iv_logo_group" android:layout_alignTop="@id/iv_logo_group" />
+            <com.kaixin001.view.KXIntroView android:textSize="12.0sp" android:textColor="@drawable/gray13" android:ellipsize="end" android:id="@id/user_signature" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" android:layout_below="@id/user_name" android:layout_alignLeft="@id/user_name" />
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/user_grade_layout" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/user_name" android:layout_alignLeft="@id/user_name">
+                <ImageView android:id="@id/level_image" android:layout_width="14.0dip" android:layout_height="14.0dip" />
+                <TextView android:textSize="8.0sp" android:textColor="@drawable/user_upgrade_level" android:gravity="center" android:id="@id/level_id" android:background="@drawable/medal_level_text" android:layout_width="34.0dip" android:layout_height="14.0dip" />
+            </LinearLayout>
+            <RelativeLayout android:id="@id/level_task_layout" android:layout_width="48.0dip" android:layout_height="27.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="20.0dip" android:layout_alignParentRight="true">
+                <Button android:gravity="center" android:id="@id/level_task_btn" android:background="@drawable/medal_mission_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+                <ImageView android:id="@id/level_task_has_new" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="1.0dip" android:src="@drawable/medal_task_new" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <ImageView android:id="@id/iv_user_dividerline" android:background="@drawable/sidebar_dividing_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/iv_user_group" />
+        <RelativeLayout android:id="@id/iv_setting_group" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <ImageView android:id="@id/iv_setting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/menulist_settings_background" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="16.0sp" android:textColor="@drawable/gray13" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:text="账户设置" android:shadowColor="#a3000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_toRightOf="@id/iv_setting" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/iv_user_dividerline2" android:background="@drawable/sidebar_dividing_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/iv_setting_group" />
+        <ListView android:id="@id/lv_navigator" android:background="@null" android:scrollbars="none" android:fadingEdge="none" android:drawingCacheQuality="high" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@null" android:dividerHeight="0.0px" android:layout_above="@id/iv_user_dividerline2" android:layout_below="@id/iv_user_dividerline" android:fastScrollEnabled="true" />
+    </RelativeLayout>
+</RelativeLayout>

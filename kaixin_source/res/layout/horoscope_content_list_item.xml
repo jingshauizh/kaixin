@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:id="@id/horoscope_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="今日概述" style="@style/horoscope_text" />
+    <TextView android:id="@id/horoscope_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="9.0dip" android:layout_marginBottom="12.0dip" android:text="带一点游戏的感觉来面对今天的工作。心态上的不同似乎做起事来也不那麽枯燥乏味了呢。其他方面的事物也一样，之前拖拖拉拉不想去碰的事情，不要再延了，想到了就一口气去将它解决掉。联络、传达事项也应以最快速度完成。" android:lineSpacingExtra="9.0dip" style="@style/horoscope_text" />
+</LinearLayout>

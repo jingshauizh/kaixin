@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginBottom="8.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textColor="@drawable/blue1" android:id="@id/message_attachment_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_weight="1.0" />
+    <TextView android:textColor="@drawable/gray1" android:id="@id/message_attachment_size" android:layout_width="50.0dip" android:layout_height="wrap_content" />
+</LinearLayout>

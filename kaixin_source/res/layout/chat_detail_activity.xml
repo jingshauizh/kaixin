@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg01" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/chat_detail_title_bar" android:layout_alignParentTop="true" layout="@layout/kaixin_title_bar" />
+    <com.kaixin001.view.KXListView android:id="@id/chat_list_view" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@null" android:layout_above="@id/chat_sendbuttonlayout" android:layout_below="@id/chat_detail_title_bar" />
+    <TextView android:textSize="16.0sp" android:textColor="@drawable/gray5" android:gravity="center" android:id="@id/txt_loading" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/downloading" android:layout_above="@id/chat_sendbuttonlayout" android:layout_below="@id/chat_detail_title_bar" />
+    <LinearLayout android:orientation="vertical" android:id="@id/chat_sendbuttonlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <RelativeLayout android:background="@drawable/global_bar_backgroud_bottom_no_edge" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:id="@id/chat_icon" android:background="@drawable/title_mbtn_pressed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/globle_btn_emoji_botton" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <EditText android:textSize="14.0sp" android:textColor="@drawable/black" android:id="@id/chat_reply" android:background="@drawable/globle_input_bg" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:hint="@string/send_chat_msg_hint" android:maxLines="2" android:layout_toLeftOf="@id/send_chat_msg_btn" android:layout_toRightOf="@id/chat_icon" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/send_chat_msg_btn" android:background="@drawable/title_mbtn_pressed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/globle_btn_send_botton" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <com.kaixin001.view.FaceKeyboardView android:id="@id/face_keyboard_view" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

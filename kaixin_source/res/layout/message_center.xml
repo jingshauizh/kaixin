@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <com.kaixin001.view.KXListView android:id="@id/message_center_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@drawable/global_dividing_line_grain_bg" android:dividerHeight="4.0px" android:layout_below="@id/kaixin_desktop_title_bar" android:footerDividersEnabled="true" />
+</RelativeLayout>

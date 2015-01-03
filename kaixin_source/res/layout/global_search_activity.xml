@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/gray11" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/global_search_bar" layout="@layout/dark_search_header" />
+    <com.kaixin001.view.KXListView android:id="@id/global_search_listview" android:background="@drawable/gray11" android:fadingEdge="none" android:drawingCacheQuality="high" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@drawable/transparent" android:divider="@drawable/global_dividerline" android:dividerHeight="2.0px" android:layout_below="@id/global_search_bar" android:fastScrollEnabled="true" />
+    <ImageView android:id="@id/view_shadow_top" android:background="@drawable/global_search_shadow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/global_search_bar" />
+</RelativeLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@*android:drawable/list_selector_background" android:paddingLeft="10.0dip" android:paddingTop="4.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="14.0dip" android:textColor="@drawable/black" android:id="@id/vote_control_answer" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:id="@id/vote_control_bgbar" android:background="@drawable/vote_bar_bg" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="170.0dip" android:layout_height="12.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <View android:id="@id/vote_control_votebar" android:background="@drawable/votec2" android:layout_width="3.0dip" android:layout_height="fill_parent" />
+            </LinearLayout>
+            <TextView android:textSize="14.0dip" android:gravity="right" android:id="@id/vote_control_result" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/vote_control_vote_mark" android:background="@drawable/votemark" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" />
+</LinearLayout>

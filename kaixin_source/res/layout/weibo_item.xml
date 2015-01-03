@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/weibo_item" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/sub_weibo_item" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <com.kaixin001.view.KXIntroView android:textSize="16.0sp" android:textColor="@drawable/gray4" android:id="@id/content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/picture_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip">
+            <LinearLayout android:id="@id/record_photo_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <include android:layout_gravity="center" android:id="@id/picture" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/picture_snapshot" />
+            </LinearLayout>
+            <ImageView android:layout_gravity="center" android:id="@id/videothumbnail" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:maxWidth="58.0dip" android:maxHeight="58.0dip" />
+        </LinearLayout>
+        <LinearLayout android:id="@id/pictures_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip">
+            <FrameLayout android:id="@id/picture1_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="15.0dip">
+                <ImageView android:layout_gravity="center" android:id="@id/picture1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitCenter" android:maxWidth="58.0dip" android:maxHeight="58.0dip" />
+            </FrameLayout>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:id="@id/news_item_layout_subinfo" android:background="@drawable/recordtwitter_original_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+            <com.kaixin001.view.KXIntroView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@drawable/gray4" android:id="@id/txt_subinfo_title" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/picture2_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <LinearLayout android:id="@id/record_sub_photo_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <include android:id="@id/img_subinfo" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/picture_snapshot" />
+                </LinearLayout>
+                <ImageView android:id="@id/videothumbnail_subinfo" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:maxWidth="58.0dip" android:maxHeight="58.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.kaixin001.view.KXIntroView android:textSize="16.0sp" android:textColor="@drawable/gray4" android:id="@id/comment_text" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/news_item_layout_location" android:paddingTop="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <com.kaixin001.view.KXIntroView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/news_item_txt_location_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:singleLine="true" />
+        </LinearLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/group_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/news_item_txt_time_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="9 minutes before" android:singleLine="true" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/records_item_img_client_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="19.0dip" android:src="@drawable/news_sign_bymobile" />
+            <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/records_item_client_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:text="Android client" android:singleLine="true" />
+        </LinearLayout>
+    </LinearLayout>
+    <TableLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/weibo_bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip" android:stretchColumns="0,1"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TableRow>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/weibo_fw_btn" android:background="@drawable/record_iconbg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageView android:id="@id/twitter_comment_btn_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/record_fwicon" />
+                <TextView android:textSize="14.0sp" android:textColor="@drawable/black" android:id="@id/twitter_comment_btn_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="转发(5)" />
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/weibo_comment_btn" android:background="@drawable/record_iconbg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageView android:id="@id/twitter_forward_btn_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/record_commenticon" />
+                <TextView android:textSize="14.0sp" android:textColor="@drawable/black" android:id="@id/twitter_forward_btn_txt" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="评论(6)" />
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

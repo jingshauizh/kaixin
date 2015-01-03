@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/user_rank_title_layout" android:background="@drawable/medal_title_background_12" android:layout_width="fill_parent" android:layout_height="30.0dip" android:layout_marginLeft="8.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="8.0dip">
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:layout_width="40.0dip" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:text="排行" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:layout_width="50.0dip" android:layout_height="wrap_content" android:layout_marginLeft="120.0dip" android:text="姓名" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:layout_width="110.0dip" android:layout_height="wrap_content" android:text="说明" android:layout_alignParentRight="true" android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout android:background="@drawable/kaixin_background" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ListView android:id="@id/listview_ranking" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:divider="@null" />
+    </RelativeLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/user_mission_waitlayout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+        <ProgressBar android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+    </LinearLayout>
+</LinearLayout>

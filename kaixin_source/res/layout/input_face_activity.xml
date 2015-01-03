@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/face_list_bg" android:layout_width="fill_parent" android:layout_height="300.0dip" android:minHeight="100.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <GridView android:gravity="center" android:id="@id/input_face_gridview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="18.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="30.0dip" android:horizontalSpacing="10.0dip" android:verticalSpacing="15.0dip" android:stretchMode="columnWidth" android:columnWidth="50.0dip" android:numColumns="auto_fit"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button android:id="@id/input_face_cancel_button" android:background="@drawable/cancel_button_style" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

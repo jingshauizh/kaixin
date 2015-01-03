@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="2.0dip" android:layout_marginBottom="10.0dip">
+            <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <RelativeLayout android:background="@drawable/global_avatar_frame_big" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+                    <ImageView android:id="@id/home_logo" android:layout_width="84.0dip" android:layout_height="84.0dip" />
+                </RelativeLayout>
+                <ImageView android:id="@id/home_logo_edit" android:layout_width="43.0dip" android:layout_height="43.0dip" android:layout_marginLeft="68.0dip" android:layout_marginTop="76.0dip" android:src="@drawable/button_change_logo" android:scaleType="fitXY" />
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_weight="1.0">
+                <ImageView android:id="@id/home_star" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="4.0dip" />
+                <ImageView android:id="@id/home_online" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="5.0dip" android:layout_toRightOf="@id/home_star" />
+                <RelativeLayout android:id="@id/layout_home_fname" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/home_online">
+                    <ImageView android:id="@id/home_info_card" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/info_card_bg" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/layout_home_state" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_below="@id/layout_home_fname">
+                    <TextView android:textColor="@drawable/gray2" android:id="@id/star_fans_count" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                    <com.kaixin001.view.KXIntroView android:textSize="15.0sp" android:textColor="@drawable/gray5" android:id="@id/home_state" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/star_fans_count" />
+                </RelativeLayout>
+                <TextView android:textColor="@drawable/gray2" android:id="@id/home_exttext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_below="@id/layout_home_state" />
+                <LinearLayout android:orientation="vertical" android:id="@id/user_info_name_layout" android:background="@drawable/medal_up_background" android:layout_width="190.0dip" android:layout_height="60.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="8.0dip" android:layout_alignParentRight="true">
+                    <TextView android:textSize="19.0sp" android:textStyle="bold" android:textColor="@drawable/black" android:gravity="top|left|center" android:layout_gravity="top|left|center" android:id="@id/home_fname" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="14.0dip" android:layout_marginRight="14.0dip" android:text="小萌萌" />
+                    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                        <ImageView android:layout_gravity="center_vertical" android:id="@id/level_image" android:layout_width="14.0dip" android:layout_height="14.0dip" android:layout_marginLeft="14.0dip" />
+                        <TextView android:textSize="16.0sp" android:textColor="#ff666666" android:gravity="left|center" android:layout_gravity="center_vertical" android:id="@id/level_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:id="@id/user_grade_bottom_layout" android:background="@drawable/medal_down_black_background" android:layout_width="190.0dip" android:layout_height="30.0dip" android:layout_marginRight="8.0dip" android:layout_below="@id/user_info_name_layout" android:layout_alignParentRight="true">
+                    <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:id="@id/level_id" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:singleLine="true" android:shadowColor="@drawable/white" android:shadowDy="1.0" android:shadowRadius="1.0" />
+                    <TextView android:textSize="14.0sp" android:textColor="#ff999999" android:id="@id/level_exp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:singleLine="true" android:shadowColor="@drawable/white" android:shadowDx="1.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+        <TextView android:id="@id/home_header_divider" android:background="@drawable/gray3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <TextView android:textColor="@drawable/gray5" android:id="@id/home_star_intro" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="3.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="3.0dip" />
+        <TextView android:id="@id/home_star_divider" android:background="@drawable/gray3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="10.0dip" />
+    </LinearLayout>
+    <TextView android:id="@id/home_header_time_divider" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="1.0dip" />
+</LinearLayout>

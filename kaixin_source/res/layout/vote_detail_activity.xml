@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <RelativeLayout android:id="@id/vote_detail_progress_item" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="horizontal" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ProgressBar android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+            <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+        </LinearLayout>
+    </RelativeLayout>
+    <ScrollView android:id="@id/vote_detail_body" android:paddingBottom="10.0dip" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@drawable/transparent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:textSize="16.0dip" android:textColor="@drawable/black" android:id="@id/vote_detail_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:layout_width="65.0dip" android:layout_height="wrap_content" android:text="@string/initiator" />
+                    <TextView android:textSize="14.0dip" android:textColor="@drawable/blue1" android:id="@id/vote_detail_initiator" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:layout_width="65.0dip" android:layout_height="wrap_content" android:text="@string/initiate_time" />
+                    <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:id="@id/vote_detail_initiate_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:layout_width="65.0dip" android:layout_height="wrap_content" android:text="@string/end_time" />
+                    <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:id="@id/vote_detail_end_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView android:background="@drawable/gray1" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="5.0dip" />
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:id="@id/vote_detail_intro_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/vote_intro" />
+                <TextView android:textSize="14.0dip" android:textColor="@drawable/black" android:id="@id/vote_detail_intro_content" android:background="@drawable/table_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="5.0dip" />
+                <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip"
+                  xmlns:android="http://schemas.android.com/apk/res/android">
+                    <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:layout_width="60.0dip" android:layout_height="wrap_content" android:text="@string/vote_num" />
+                    <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:id="@id/vote_detail_vote_num" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+                </LinearLayout>
+                <LinearLayout android:orientation="vertical" android:id="@id/vote_detail_anwser_list" android:background="@drawable/table_bg" android:paddingLeft="0.0dip" android:paddingRight="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android" />
+                <Button android:textSize="18.0dip" android:textColor="@drawable/white" android:layout_gravity="center" android:id="@id/vote_detail_vote_button" android:background="@drawable/votebutton_disable" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/vote" />
+                <TextView android:textSize="14.0dip" android:textColor="@drawable/red" android:layout_gravity="center" android:id="@id/vote_detail_vote_close_notice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/vote_closed" />
+                <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:id="@id/vote_detail_friend_vote_info_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/vote_info_of_friends" />
+                <LinearLayout android:orientation="vertical" android:id="@id/vote_detail_result_list" android:background="@drawable/table_bg" android:paddingLeft="0.0dip" android:paddingTop="2.0dip" android:paddingRight="0.0dip" android:paddingBottom="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+                  xmlns:android="http://schemas.android.com/apk/res/android" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

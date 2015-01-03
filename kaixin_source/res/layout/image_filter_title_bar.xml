@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/image_filter_title_bg" android:layout_width="fill_parent" android:layout_height="48.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/image_filter_title_left_text" android:background="@drawable/title_lbtn_pressed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/title_home_button" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <ImageView android:textColor="@drawable/white" android:gravity="center" android:id="@id/image_filter_title_right_text" android:background="@drawable/title_rbtn_pressed" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/title_btn_ok" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <ProgressBar android:id="@id/image_filter_progress_bar" android:visibility="gone" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="5.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable_white_circle" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="?android:attr/progressBarStyleSmall" />
+    <FrameLayout android:id="@id/image_filter_title_center_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_toLeftOf="@id/image_filter_title_right_text" android:layout_toRightOf="@id/image_filter_title_left_text">
+        <RelativeLayout android:gravity="center_vertical" android:id="@id/title_action_layout" android:paddingLeft="30.0dip" android:paddingRight="30.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <ImageView android:id="@id/image_filter_action_back" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/image_filter_action_back_arrow" android:layout_alignParentLeft="true" />
+            <ImageView android:id="@id/image_filter_action_forward" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/image_filter_action_forward_arrow" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <RelativeLayout android:layout_gravity="center" android:id="@id/title_center_text_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="20.0sp" android:textColor="@drawable/white" android:ellipsize="end" android:id="@id/center_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:singleLine="true" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

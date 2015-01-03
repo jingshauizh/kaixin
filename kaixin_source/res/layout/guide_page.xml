@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/guid_show1" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/guide_go_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <Button android:textSize="19.0sp" android:textColor="#ffffffff" android:gravity="center" android:id="@id/guide_btn" android:background="@drawable/guide_channeloff_button" android:layout_width="167.0dip" android:layout_height="40.0dip" android:text="@string/guide_use_it_btn" android:shadowColor="#7f000000" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:layout_centerHorizontal="true" />
+        <CheckBox android:textColor="#ff30887e" android:id="@id/guide_check" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:checked="true" android:text="@string/guide_notice_friends_checkbox" android:layout_below="@id/guide_btn" android:layout_centerHorizontal="true" style="@style/GuideCheckBox" />
+    </RelativeLayout>
+</RelativeLayout>

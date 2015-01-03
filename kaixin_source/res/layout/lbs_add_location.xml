@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/desktopnoticebg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/home_title_bar" layout="@layout/kaixin_title_bar" />
+    <ScrollView android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@drawable/transparent" android:layout_below="@id/home_title_bar"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <RelativeLayout android:id="@id/lbs_location_name" android:layout_width="wrap_content" android:layout_height="wrap_content"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:textSize="14.0sp" android:textColor="@drawable/black" android:id="@id/lbs_location_name_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lbs_location_name" />
+                <EditText android:textSize="16.0sp" android:textColor="@drawable/black" android:id="@id/lbs_location_name_textedit" android:background="@drawable/edit_text_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" android:maxLength="50" android:layout_below="@id/lbs_location_name_caption" />
+            </RelativeLayout>
+            <RelativeLayout android:id="@id/lbs_address_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:layout_below="@id/lbs_location_name"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <TextView android:textSize="14.0sp" android:textColor="@drawable/black" android:id="@id/lbs_address_caption" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lbs_location_address" />
+                <EditText android:textSize="16.0sp" android:textColor="@drawable/black" android:id="@id/lbs_address_textedit" android:background="@drawable/edit_text_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:singleLine="true" android:maxLength="200" android:layout_below="@id/lbs_address_caption" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

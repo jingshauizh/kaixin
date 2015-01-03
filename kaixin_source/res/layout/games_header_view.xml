@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/games_top_banner" android:clickable="true" android:layout_width="fill_parent" android:layout_height="138.0dip" />
+    <ImageView android:background="@drawable/global_dividing_line" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <TextView android:textSize="14.0sp" android:textColor="@drawable/toptab_bluebar" android:id="@id/official_games" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:text="官方游戏" />
+    <ImageView android:background="@drawable/toptab_bluebar" android:layout_width="60.0dip" android:layout_height="2.0dip" android:layout_marginLeft="6.0dip" />
+    <ImageView android:background="@drawable/toptab_bluebar" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <com.kaixin001.view.KXHorizontalListView android:id="@id/horizListview" android:paddingTop="8.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="120.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" />
+    <TextView android:textSize="14.0sp" android:textColor="@drawable/toptab_bluebar" android:id="@id/third_games" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="1.0dip" android:text="推荐游戏" />
+    <ImageView android:background="@drawable/toptab_bluebar" android:layout_width="60.0dip" android:layout_height="2.0dip" android:layout_marginLeft="6.0dip" />
+    <ImageView android:background="@drawable/toptab_bluebar" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</LinearLayout>

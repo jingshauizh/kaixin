@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/chatgroup_details_titlelayout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/chatgroup_details_textlayout" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <include android:id="@id/circle_details_appicon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="4.0dip" android:layout_marginTop="6.0dip" android:layout_marginRight="10.0dip" layout="@layout/kaixin_avatar" />
+        <LinearLayout android:orientation="vertical" android:id="@id/chatgroup_details_contentlayout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_marginRight="10.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <com.kaixin001.view.KXIntroView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/black" android:id="@id/chatgroup_details_ntext" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <include android:id="@id/chatgroup_details_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" layout="@layout/picture_snapshot" />
+            <LinearLayout android:gravity="center_vertical" android:id="@id/llyt_publish_info" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:id="@id/chatgroup_details_exttext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Time" />
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/tv_client_name" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="19.0dip" android:text="Android Client" android:singleLine="true" android:drawableLeft="@drawable/news_sign_bymobile" android:drawablePadding="3.0dip" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/chatgroup_details_ivLine" android:background="@drawable/commentarrow" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+</LinearLayout>

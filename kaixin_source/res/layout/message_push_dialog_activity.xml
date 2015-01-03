@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="300.0dip" android:layout_height="300.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_title_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/message_push_dialog_title_bar" />
+    <RelativeLayout android:id="@id/sendbuttonlayout" android:background="@drawable/message_push_sendmsg_bg" android:clickable="true" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button android:id="@id/face_icon" android:background="@drawable/chat_edit_face_style" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <Button android:textSize="14.0sp" android:textColor="@drawable/kaixin_text_color_black" android:id="@id/send_msg_btn" android:background="@drawable/chat_edit_send_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="发送" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+        <EditText android:textSize="16.0sp" android:textColor="@drawable/black" android:id="@id/msg_content" android:background="@drawable/edit_input_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="5.0dip" android:hint="@string/send_chat_msg_hint" android:maxLines="7" android:maxLength="200" android:layout_toLeftOf="@id/send_msg_btn" android:layout_toRightOf="@id/face_icon" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <com.kaixin001.view.KXListView android:id="@id/message_detail_list" android:background="@drawable/message_detail_bg" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@drawable/transparent" android:divider="@drawable/message_detail_bg" android:dividerHeight="1.0px" android:layout_above="@id/sendbuttonlayout" android:layout_below="@id/kaixin_title_bar" android:footerDividersEnabled="true" />
+    <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:id="@id/message_list_empty_notice" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/message_detail_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ProgressBar android:layout_gravity="center_vertical" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+    </LinearLayout>
+</RelativeLayout>

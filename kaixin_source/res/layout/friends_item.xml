@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_list_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/black_news" android:gravity="center_vertical" android:id="@id/txt_section" android:background="@drawable/alphabet_bg" android:paddingLeft="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="A" />
+    <ImageView android:id="@id/txt_section_dividing" android:background="@drawable/global_dividing_line_grain_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/friend_item_layout" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:id="@id/friends_item_leftlayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:layout_weight="1.0">
+            <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <ImageView android:id="@id/friends_item_icon" android:layout_width="35.0dip" android:layout_height="35.0dip" android:src="@drawable/head_default" android:layout_centerInParent="true" />
+                <ImageView android:background="@drawable/head_border_news" android:layout_width="45.0dip" android:layout_height="45.0dip" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/black" android:layout_gravity="center_vertical" android:id="@id/friends_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:layout_marginBottom="2.0dip" android:shadowColor="#3fffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+            <ImageView android:layout_gravity="center_vertical" android:id="@id/friends_item_icon_online" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" />
+        </LinearLayout>
+        <CheckBox android:layout_gravity="center_vertical" android:id="@id/friends_checked" android:focusable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:button="@drawable/contacts_item_box_style" />
+        <TextView android:textStyle="bold" android:textColor="@drawable/gray4" android:gravity="center_vertical" android:layout_gravity="center_vertical" android:id="@id/friends_item_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/friends_item_icon_end" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/right_arrow_style" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/no_search_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray13" android:gravity="center" android:id="@id/no_search_tip" android:layout_width="fill_parent" android:layout_height="60.0dip" android:text="没有找到匹配的好友" android:layout_alignParentTop="true" />
+        <ImageView android:id="@id/myfriends_item_divide_line" android:background="@drawable/global_dividing_line" android:layout_width="fill_parent" android:layout_height="2.0px" android:scaleType="center" android:layout_below="@id/no_search_tip" />
+        <RelativeLayout android:id="@id/bottom_footer" android:layout_width="fill_parent" android:layout_height="51.0dip" android:layout_below="@id/myfriends_item_divide_line">
+            <ImageView android:id="@id/search_inkaixin_icon" android:background="@drawable/globle_search_icon_blue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="17.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/blue" android:gravity="center_vertical" android:id="@id/find_in_kaixin" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="在开心网搜索" android:layout_toRightOf="@id/search_inkaixin_icon" android:layout_centerVertical="true" />
+        </RelativeLayout>
+        <ImageView android:id="@id/myfriends_foot_divide_line" android:background="@drawable/global_dividing_line" android:layout_width="fill_parent" android:layout_height="2.0px" android:layout_below="@id/bottom_footer" />
+    </RelativeLayout>
+</LinearLayout>

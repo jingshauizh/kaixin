@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/home_privacy_info_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:gravity="center" android:id="@id/home_privacy_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/home_privacy_info" android:drawableLeft="@drawable/profile_lock" android:drawablePadding="5.0dip" />
+    </LinearLayout>
+</LinearLayout>

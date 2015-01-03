@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/kaixin_background_default" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/list_activity_title_bar_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:id="@id/list_activity_title_bar_search" android:visibility="gone" layout="@layout/kaixin_title_bar_search_friend" />
+        <include android:id="@id/list_activity_title_bar" android:layout_below="@id/list_activity_title_bar_search" layout="@layout/kaixin_title_bar" />
+    </RelativeLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/list_activity_title_bar_layout">
+        <TextView android:textStyle="bold" android:textColor="@drawable/gray2" android:gravity="center" android:id="@id/list_empty_item_label" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:layout_centerInParent="true" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/list_activity_select_college_layout" android:background="@drawable/global_bar_bg_w" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="40.0dip">
+            <RelativeLayout android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="14.699982sp" android:textColor="@drawable/gray15" android:gravity="center_vertical" android:id="@id/list_activity_select_college" android:layout_width="wrap_content" android:layout_height="fill_parent" android:maxWidth="100.0dip" android:text="@string/find_friend_all_college" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/list_activity_select_college_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.699982dip" android:src="@drawable/global_bar_expansion_gray" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+            <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/global_bar_line_gray" />
+            <RelativeLayout android:layout_width="1.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+                <TextView android:textSize="14.699982sp" android:textColor="@drawable/gray15" android:gravity="center_vertical" android:id="@id/list_activity_select_year" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/find_friend_admission_year2" android:layout_centerInParent="true" />
+                <ImageView android:id="@id/list_activity_select_year_tag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.699982dip" android:src="@drawable/global_bar_expansion_gray" android:layout_alignParentRight="true" />
+            </RelativeLayout>
+        </LinearLayout>
+        <com.kaixin001.view.KXListView android:id="@id/list_activity_list" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@null" android:layout_below="@id/list_activity_select_college_layout" />
+        <LinearLayout android:orientation="vertical" android:id="@id/lookround_login_layout" android:background="@drawable/white2" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+            <View android:background="@drawable/blue" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+            <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <Button android:textSize="16.0sp" android:textColor="@drawable/button_text_color" android:id="@id/lookround_login_btn_login" android:background="@drawable/fancydialog_item_bg" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/login_btn" android:layout_weight="1.0" />
+                <View android:layout_gravity="center_vertical" android:background="@drawable/blue" android:layout_width="1.0dip" android:layout_height="24.0dip" />
+                <Button android:textSize="16.0sp" android:textColor="@drawable/button_text_color" android:id="@id/lookround_login_btn_register" android:background="@drawable/fancydialog_item_bg" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="@string/enroll_btn" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <RelativeLayout android:id="@id/find_select_namelist_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="354.6953dip" android:layout_below="@id/list_activity_select_college_layout">
+            <ListView android:id="@id/find_select_namelist" android:background="@drawable/global_list_bg" android:paddingBottom="5.399994dip" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@drawable/select_photo_dividing_line" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <LinearLayout android:id="@id/list_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/list_progress_item_ProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+            <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/list_progress_item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

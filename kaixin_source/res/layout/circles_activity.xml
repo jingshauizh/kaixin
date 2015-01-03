@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/white4" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/home_title_bar" android:layout_alignParentTop="true" layout="@layout/kaixin_title_bar" />
+    <com.kaixin001.view.KXListView android:id="@id/lstv_person_list" android:background="@drawable/white4" android:visibility="gone" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:scrollingCache="true" android:divider="@null" android:dividerHeight="0.0px" android:layout_below="@id/home_title_bar" android:layout_centerInParent="true" android:headerDividersEnabled="false" />
+    <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_no_circle" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/return_no_circles" android:layout_below="@id/home_title_bar" android:layout_centerInParent="true" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/llyt_waiting" android:background="@drawable/white4" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/home_title_bar" android:layout_centerVertical="true">
+        <ProgressBar android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:layout_gravity="center_vertical" android:id="@id/tvWaiting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+    </LinearLayout>
+</RelativeLayout>

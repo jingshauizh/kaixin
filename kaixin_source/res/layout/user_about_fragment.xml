@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/title_layout" layout="@layout/kaixin_title_bar" />
+    <com.kaixin001.view.KXTopTabHost android:id="@id/grade_tabhost" android:background="@color/tabbg_default" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    <RelativeLayout android:id="@id/content_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/cloud_album_picitem_image" android:background="@drawable/cloud_album_bg" android:padding="1.0px" android:layout_width="@dimen/CLOUD_ALBUM_ITEM_WIDTH" android:layout_height="@dimen/CLOUD_ALBUM_ITEM_WIDTH" android:scaleType="centerCrop" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/cloud_album_picitem_image_back" android:background="@drawable/cloud_album_bg" android:visibility="gone" android:layout_width="@dimen/CLOUD_ALBUM_ITEM_WIDTH" android:layout_height="@dimen/CLOUD_ALBUM_ITEM_WIDTH" android:layout_centerInParent="true" />
+    <ImageView android:id="@id/cloud_album_picitem_grayframe" android:background="@drawable/cloud_album_bg_transparent" android:layout_width="@dimen/CLOUD_ALBUM_ITEM_WIDTH" android:layout_height="@dimen/CLOUD_ALBUM_ITEM_WIDTH" android:layout_centerInParent="true" />
+    <RelativeLayout android:id="@id/cloud_album_picitem_failed_layout" android:layout_width="@dimen/CLOUD_ALBUM_ITEM_WIDTH" android:layout_height="@dimen/CLOUD_ALBUM_ITEM_WIDTH" android:layout_centerInParent="true">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:src="@drawable/cloud_album_icon_fault" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="12.0sp" android:textColor="@drawable/gray4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="14.0dip" android:text="@string/cloud_album_try_again" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/cloud_album_picitem_progressbar_layout" android:paddingBottom="8.0dip" android:layout_width="@dimen/CLOUD_ALBUM_ITEM_PROGRESSBAR_WIDTH" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true">
+        <ImageView android:id="@id/cloud_album_picitem_progressbar_trough" android:background="@drawable/cloud_album_progress_trough" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <ImageView android:id="@id/cloud_album_picitem_progressbar_bar" android:background="@drawable/cloud_album_progress_bar" android:layout_width="0.0px" android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

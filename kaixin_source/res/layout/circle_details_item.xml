@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/chatgroup_details_item" android:layout_width="fill_parent" android:layout_height="?android:listPreferredItemHeight"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/chatgroup_details_divider_wtext" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="4.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:id="@id/chatgroup_details_divider" android:background="@drawable/gray1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginBottom="4.0dip" />
+    </RelativeLayout>
+    <include android:layout_gravity="center" android:id="@id/chatgroup_details_subappicon" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/chatgroup_details_divider_wtext" layout="@layout/kaixin_avatar" />
+    <RelativeLayout android:id="@id/chatgroup_details_conlayout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/chatgroup_details_subappicon" android:layout_below="@id/chatgroup_details_divider_wtext"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textStyle="bold" android:id="@id/chatgroup_details_subntext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" />
+        <TextView android:textStyle="bold" android:textColor="@drawable/gray2" android:id="@id/circle_details_saytext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="1.0dip" android:text="@string/say_that" android:layout_toRightOf="@id/chatgroup_details_subntext" />
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@drawable/gray2" android:id="@id/chatgroup_details_subttext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginTop="1.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" />
+        <com.kaixin001.view.KXIntroView android:textColor="@drawable/black" android:id="@id/chatgroup_details_subexttext" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_below="@id/chatgroup_details_subntext" />
+    </RelativeLayout>
+</RelativeLayout>

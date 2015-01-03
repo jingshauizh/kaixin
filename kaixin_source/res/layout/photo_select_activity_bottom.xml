@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/global_send_bar_backgroud" android:layout_width="fill_parent" android:layout_height="72.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_centerVertical="true">
+        <com.kaixin001.view.KXHorizontalScrollView android:id="@id/photo_select_photos_selected" android:scrollbars="none" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_weight="1.0">
+            <LinearLayout android:orientation="horizontal" android:id="@id/photos_selected_list" android:fadingEdge="none" android:fadingEdgeLength="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true" />
+        </com.kaixin001.view.KXHorizontalScrollView>
+        <RelativeLayout android:layout_gravity="center_vertical" android:id="@id/photo_confirm" android:background="@drawable/photo_select_confirm_btn" android:layout_width="72.0dip" android:layout_height="53.399994dip" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+            <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+                <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:layout_gravity="center_horizontal" android:id="@id/photo_confirm_pic_num" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <TextView android:textSize="14.0sp" android:textColor="@drawable/white" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/button_ok" />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

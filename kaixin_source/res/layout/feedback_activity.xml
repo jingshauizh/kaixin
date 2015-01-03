@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <ScrollView android:id="@id/write_feedback_activity_main_Layout" android:background="@drawable/global_input_box_focus" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:cacheColorHint="@drawable/transparent" android:layout_weight="1.0"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <EditText android:textSize="14.0sp" android:textColorHint="@drawable/gray13" android:gravity="top" android:id="@id/write_feedback_content_view" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:minHeight="150.0dip" android:hint="@string/feedback_text" android:maxLength="800" android:inputType="textMultiLine" />
+        </LinearLayout>
+    </ScrollView>
+    <RelativeLayout android:id="@id/feedback_voice_btnlayout" android:background="@drawable/global_bar_backgroud_bottom_no_edge" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_marginTop="13.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/global_btn_voice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/global_btn_voice" android:scaleType="center" />
+        <TextView android:textSize="14.0dip" android:textColor="@drawable/gray13" android:gravity="center" android:id="@id/feedback_voice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/feedback_voice" android:layout_toRightOf="@id/global_btn_voice" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</LinearLayout>

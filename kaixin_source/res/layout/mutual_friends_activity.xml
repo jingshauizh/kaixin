@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/gray8" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/home_title_bar" android:layout_alignParentTop="true" layout="@layout/kaixin_title_bar" />
+    <LinearLayout android:id="@id/llyt_people_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/home_title_bar">
+        <com.kaixin001.view.KXListView android:id="@id/lv_mutualfriends_list" android:background="@drawable/gray8" android:visibility="visible" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="true" android:divider="@null" android:dividerHeight="0.0px" android:headerDividersEnabled="false"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/llyt_waiting" android:paddingBottom="50.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/home_title_bar" android:layout_centerVertical="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ProgressBar android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:layout_gravity="center_vertical" android:id="@id/tvWaiting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+    </LinearLayout>
+</RelativeLayout>

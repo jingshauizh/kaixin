@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:id="@id/find_friend_topitem" android:background="@drawable/global_list_up" android:layout_width="fill_parent" android:layout_height="49.399994dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/find_friend_topitem_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.399994dip" />
+    <TextView android:textSize="16.0sp" android:textColor="@drawable/gray5" android:layout_gravity="center_vertical" android:id="@id/find_friend_topitem_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.399994dip" android:layout_weight="1.0" />
+    <ImageView android:layout_gravity="right|center" android:id="@id/find_friend_topitem_enter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="9.399994dip" android:src="@drawable/global_icon_enter" />
+</LinearLayout>

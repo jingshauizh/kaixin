@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/msg_detail_button_bg" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textColor="@drawable/blue1" android:ellipsize="end" android:gravity="center" android:id="@id/msg_detail_check_original_text" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="test" android:singleLine="true" android:layout_toLeftOf="@id/kaixin_title_bar_center_icon" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <ImageView android:id="@id/kaixin_title_bar_center_icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/right_arrow_style" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

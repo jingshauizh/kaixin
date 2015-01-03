@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/setting_category_widget">
+        <CheckBoxPreference android:title="@string/setting_check_widget_refresh_interval" android:key="check_widget_refresh_interval" android:defaultValue="true" android:summaryOn="@string/setting_active" android:summaryOff="@string/setting_inactive" />
+        <ListPreference android:entries="@array/setting_widget_refresh_interval_options" android:title="@string/setting_widget_refresh_interval" android:key="widget_refresh_interval" android:dependency="check_widget_refresh_interval" android:defaultValue="1800000" android:entryValues="@array/setting_widget_refresh_interval_option_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/setting_category_new_msg_notification">
+        <ListPreference android:entries="@array/setting_notification_refresh_interval_options" android:title="@string/setting_notification_refresh_interval" android:key="notification_refresh_interval" android:defaultValue="600000" android:entryValues="@array/setting_notification_refresh_interval_option_values" />
+        <CheckBoxPreference android:title="@string/setting_notification_message_logout" android:key="notification_message_logout_preference" android:defaultValue="true" android:summaryOn="@string/setting_notification_message_logout_open_summary" android:summaryOff="@string/setting_notification_message_logout_close_summary" />
+        <CheckBoxPreference android:title="@string/setting_push_repost" android:key="push_repost_preference" android:dependency="notification_message_logout_preference" android:defaultValue="true" android:summaryOn="@string/setting_push_repost_open_summary" android:summaryOff="@string/setting_push_repost_open_summary" />
+        <CheckBoxPreference android:title="@string/setting_no_notification_evening" android:key="no_notification_evening_preference" android:summary="@string/setting_no_notification_evening_summary" android:dependency="notification_message_logout_preference" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/setting_notification_vibrate" android:key="notification_vibrate_preference" android:summary="@string/setting_notification_vibrate_summary" android:defaultValue="true" />
+        <CheckBoxPreference android:title="@string/setting_notification_rington" android:key="notification_ringtone_enabled_preference" android:summary="@string/setting_notification_rington_summary" android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/saveflow_title">
+        <CheckBoxPreference android:title="@string/saveflow_item" android:key="setting_saveflow_pref" android:defaultValue="true" android:summaryOn="@string/saveflow_item_intro" android:summaryOff="@string/saveflow_item_intro" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/cloud_album_setting_name">
+        <CheckBoxPreference android:title="@string/cloud_album_setting_network_name" android:key="cloud_album_setting_network_pref" android:defaultValue="true" android:summaryOn="@string/cloud_album_setting_wifi_sync" android:summaryOff="@string/cloud_album_setting_wifi_sync" />
+        <ListPreference android:entries="@array/cloud_album_setting_content" android:title="@string/cloud_album_setting_content_name" android:key="cloud_album_setting_content_pref" android:dependency="cloud_album_setting_network_pref" android:defaultValue="1" android:entryValues="@array/cloud_album_setting_content_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/horoscope_setting_name">
+        <CheckBoxPreference android:title="@string/setting_push_horoscope" android:key="push_horoscope_preference" android:dependency="notification_message_logout_preference" android:defaultValue="true" android:summaryOn="@string/setting_push_horoscope_open_summary" android:summaryOff="@string/setting_push_horoscope_open_summary" />
+        <ListPreference android:entries="@array/horoscope_choose_content" android:title="@string/horoscope_setting_choose_title" android:key="horoscope_setting_choose_list" android:dependency="push_horoscope_preference" android:defaultValue="1" android:entryValues="@array/horoscope_choose_content_values" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/software_version_title" android:key="software_version">
+        <Preference android:title="@string/software_current_version" android:key="software_version_preference" android:summary="@string/software_version_summary" />
+        <Preference android:title="@string/others_check_new_updates" android:key="software_check_new_updates" android:summary="@string/software_check_version_summary" />
+    </PreferenceCategory>
+</PreferenceScreen>

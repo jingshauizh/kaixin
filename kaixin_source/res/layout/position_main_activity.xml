@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/position_main_title_bar" layout="@layout/kaixin_title_bar" />
+    <com.kaixin001.view.KXTopTabHost android:id="@id/position_main_tabhost" android:background="@color/tabbg_default" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <com.kaixin001.view.PullToRefreshView android:orientation="vertical" android:id="@id/pulldown_view" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.kaixin001.view.KXListView android:scrollbarSize="0.0px" android:id="@id/lv_position" android:background="@drawable/kaixin_background" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:dividerHeight="0.0px"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+        </com.kaixin001.view.PullToRefreshView>
+        <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:gravity="center" android:id="@id/tv_no_data" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="没有附近的位置签到" />
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/llyt_waiting" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerVertical="true">
+            <ProgressBar android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+            <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:layout_gravity="center_vertical" android:id="@id/tvWaiting" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

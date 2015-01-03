@@ -6,6 +6,33 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import org.json.JSONObject;
 
+/*
+ * 
+ 	{"fuid":105873460,
+	"fname":"\u5e7d\u9ed8\u5927\u5e08",
+	"flogo":"http:\/\/pic.kaixin001.com.cn\/logo\/87\/34\/50_105873460_1.jpg",
+	"ntype":1088,
+	"ntypename":"plaza_reposte",
+	"ctime":1420204443,
+	"stime":"01\u670802\u65e5 21:14",
+	"intro":"\u8f6c\u5e16\u7ed9\u5927\u5bb6\uff1a",
+	"privacy":"",
+	"thumbnail":"",
+	"id":9664611293,
+	"star":1,
+	"imglist":"",
+	"imgurl":"http:\/\/pic.kaixin001.com.cn\/pic\/app\/41\/86\/1192_200418640_repaste-news.gif",
+	"cnum":1,
+	"commentflag":"1",
+	"title":"\u88c5\u903c\u5230\u725b\u903c\u53ea\u662f\u4e00\u77ac\u95f4\uff01",
+	"upnum":3920,
+	"rpnum":1290,
+	"vnum":1279,
+	"group_data":"",
+	"source":"\u6765\u81ea\u7f51\u9875",
+	"source_id":"",
+	"abstract":"","ismyfrined":null}]}
+ * */
 public class NewsInfo
   implements Serializable
 {

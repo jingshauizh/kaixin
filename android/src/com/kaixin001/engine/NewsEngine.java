@@ -1,11 +1,16 @@
 package com.kaixin001.engine;
 
+import java.io.BufferedInputStream;
 import java.io.File;
+import java.io.InputStream;
 import java.net.URI;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.apache.http.client.methods.HttpGet;
 import org.json.JSONArray;
@@ -15,6 +20,9 @@ import org.json.JSONObject;
 import android.content.Context;
 import android.content.Intent;
 import android.text.TextUtils;
+import android.util.Log;
+
+import java.net.HttpURLConnection;
 
 import com.kaixin001.item.FilmItem;
 import com.kaixin001.item.GiftItem;
@@ -28,14 +36,16 @@ import com.kaixin001.model.MessageCenterModel;
 import com.kaixin001.model.NewsModel;
 import com.kaixin001.model.Setting;
 import com.kaixin001.model.User;
+import com.kaixin001.network.HttpConnection;
+import com.kaixin001.network.HttpMethod;
 import com.kaixin001.network.HttpProxy;
+import com.kaixin001.network.JSONUtil;
 import com.kaixin001.network.Protocol;
 import com.kaixin001.util.FileUtil;
 import com.kaixin001.util.KXLog;
 import com.kaixin001.view.media.KXMediaInfo;
 
-public class NewsEngine extends KXEngine
-{
+public class NewsEngine extends KXEngine {
 	public static final String HOME_ALBUM_FILE = "home_album.kx";
 	public static final String HOME_INFO_FILE = "home_info.kx";
 	public static final String HOME_NEWS_FILE = "home_news.kx";
@@ -48,8 +58,7 @@ public class NewsEngine extends KXEngine
 	private static NewsEngine instance;
 	public String msg;
 
-	public static NewsEngine getInstance()
-	{
+	public static NewsEngine getInstance() {
 
 		if (instance == null)
 			instance = new NewsEngine();
@@ -58,35 +67,28 @@ public class NewsEngine extends KXEngine
 
 	}
 
-	public static boolean isMobileClient(String paramString)
-	{
+	public static boolean isMobileClient(String paramString) {
 		int i = 1;
 		if (TextUtils.isEmpty(paramString))
 			return false;
 		String str = paramString.trim();
-		try
-		{
+		try {
 			int j = Integer.parseInt(str);
-			if (((j >= 1001) && (j <= 1003)) || ((j >= 3001) && (j <= 3015)))
-			{
+			if (((j >= 1001) && (j <= 1003)) || ((j >= 3001) && (j <= 3015))) {
 				return true;
 			}
 			return false;
-		}
-		catch (Exception localException)
-		{
+		} catch (Exception localException) {
 			return false;
 		}
 	}
 
 	private boolean parseNewsArray(JSONArray paramJSONArray,
-			String paramString, NewsModel paramNewsModel)
-	{
+			String paramString, NewsModel paramNewsModel) {
 		ArrayList localArrayList1 = paramNewsModel.getNewsList();
 		if (localArrayList1 == null)
 			return false;
-		while (true)
-		{
+		while (true) {
 			int i;
 			JSONObject localJSONObject1 = null;
 			NewsInfo localNewsInfo;
@@ -102,15 +104,13 @@ public class NewsEngine extends KXEngine
 			int i2 = 0;
 			JSONArray localJSONArray10 = null;
 			int n = 0;
-			try
-			{
+			try {
 				ArrayList localArrayList2 = new ArrayList();
 				i = 0;
 				if (i < paramJSONArray.length())
 					continue;
 				int j = 0;
-				if (j >= paramJSONArray.length())
-				{
+				if (j >= paramJSONArray.length()) {
 
 					String str6 = ((JSONObject) paramJSONArray.get(i))
 							.optString("fuid");
@@ -208,8 +208,7 @@ public class NewsEngine extends KXEngine
 				if (localJSONObject1.isNull("id"))
 					continue;
 				localNewsInfo.mNewsId = localJSONObject1.optString("id");
-				if (localJSONObject1.opt("star") != null)
-				{
+				if (localJSONObject1.opt("star") != null) {
 
 					localNewsInfo.mStar = localJSONObject1.optString("star",
 							"0");
@@ -369,21 +368,16 @@ public class NewsEngine extends KXEngine
 							"");
 					continue;
 				}
-			}
-			catch (Exception localException)
-			{
+			} catch (Exception localException) {
 				KXLog.e("NewsEngine", "ParseNewsArray", localException);
 				return false;
 			}
 			String str3 = localJSONObject1.optString("fstar", "0");
 
 			JSONObject localJSONObject12 = null;
-			try
-			{
+			try {
 				localJSONObject12 = (JSONObject) localJSONArray3.get(i12);
-			}
-			catch (JSONException e)
-			{
+			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -404,8 +398,7 @@ public class NewsEngine extends KXEngine
 			localPhotoItem2.fuid = localJSONObject12.optString("uid", null);
 			if (localPhotoItem2.fuid == null)
 				;
-			for (String str5 = localNewsInfo.mFuid;; str5 = localPhotoItem2.fuid)
-			{
+			for (String str5 = localNewsInfo.mFuid;; str5 = localPhotoItem2.fuid) {
 				localPhotoItem2.fuid = str5;
 				localPhotoItem2.large = localJSONObject12
 						.optString("large", "");
@@ -414,12 +407,9 @@ public class NewsEngine extends KXEngine
 				break;
 			}
 			JSONObject localJSONObject11 = null;
-			try
-			{
+			try {
 				localJSONObject11 = (JSONObject) localJSONArray4.get(i8);
-			}
-			catch (JSONException e)
-			{
+			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -433,24 +423,18 @@ public class NewsEngine extends KXEngine
 			JSONArray localJSONArray11 = localJSONObject11
 					.optJSONArray("imglist");
 			localRepItem.mThumbImg = null;
-			if ((localJSONArray11 != null) && (localJSONArray11.length() > 0))
-			{
-				try
-				{
+			if ((localJSONArray11 != null) && (localJSONArray11.length() > 0)) {
+				try {
 					localRepItem.mThumbImg = ((String) localJSONArray11.get(0));
-				}
-				catch (JSONException e)
-				{
+				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				localRepItem.mRepostImgList = new ArrayList();
 			}
-			for (int i10 = 0;; i10++)
-			{
+			for (int i10 = 0;; i10++) {
 				int i11 = localJSONArray11.length();
-				if (i10 >= i11)
-				{
+				if (i10 >= i11) {
 					localRepItem.mContent = localJSONObject11.optString(
 							"abstract", "");
 					localNewsInfo.mRepostList.add(localRepItem);
@@ -458,24 +442,18 @@ public class NewsEngine extends KXEngine
 					break;
 				}
 				String str4 = null;
-				try
-				{
+				try {
 					str4 = (String) localJSONArray11.get(i10);
-				}
-				catch (JSONException e)
-				{
+				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 				localRepItem.mRepostImgList.add(str4);
 			}
 			JSONObject localJSONObject10 = null;
-			try
-			{
+			try {
 				localJSONObject10 = (JSONObject) localJSONArray5.get(i6);
-			}
-			catch (JSONException e)
-			{
+			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -490,12 +468,9 @@ public class NewsEngine extends KXEngine
 			i6++;
 
 			JSONObject localJSONObject7 = null;
-			try
-			{
+			try {
 				localJSONObject7 = (JSONObject) localJSONArray8.get(i4);
-			}
-			catch (JSONException e)
-			{
+			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -507,12 +482,9 @@ public class NewsEngine extends KXEngine
 			i4++;
 
 			JSONObject localJSONObject6 = null;
-			try
-			{
+			try {
 				localJSONObject6 = (JSONObject) localJSONArray9.get(i2);
-			}
-			catch (JSONException e)
-			{
+			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -524,12 +496,9 @@ public class NewsEngine extends KXEngine
 			i2++;
 
 			JSONObject localJSONObject5 = null;
-			try
-			{
+			try {
 				localJSONObject5 = (JSONObject) localJSONArray10.get(n);
-			}
-			catch (JSONException e)
-			{
+			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -550,8 +519,7 @@ public class NewsEngine extends KXEngine
 		}
 	}
 
-	private void updateWidget(Context paramContext)
-	{
+	private void updateWidget(Context paramContext) {
 		if (paramContext != null)
 			paramContext
 					.sendBroadcast(new Intent("com.kaixin001.WIDGET_UPDATE"));
@@ -560,29 +528,24 @@ public class NewsEngine extends KXEngine
 	public boolean getHomeForData(Context paramContext,
 			NewsModel paramNewsModel, String paramString1, String paramString2,
 			String paramString3, String paramString4, String paramString5,
-			String paramString6) throws SecurityErrorException
-	{
+			String paramString6) throws SecurityErrorException {
 		this.ret = 0;
 		int i = Integer.parseInt(paramString1);
 		String str1 = Protocol.getInstance().makeNewsRequest(paramContext,
 				true, paramString1, paramString2, User.getInstance().getUID(),
 				paramString3, paramString4, paramString5, paramString6);
 		HttpProxy localHttpProxy = new HttpProxy(paramContext);
-		try
-		{
+		try {
 			String str4 = localHttpProxy.httpGet(str1, null, null);
 			String str2 = str4;
 			String str3 = FileUtil.getKXCacheDir(paramContext);
-			if (User.getInstance().getUID().compareTo(paramString6) == 0)
-			{
+			if (User.getInstance().getUID().compareTo(paramString6) == 0) {
 				int j = 1;
 				if (parseNewsJSON(paramContext, true, str2, paramNewsModel, i,
 						paramString3, paramString5, paramString6))
 					return false;
 			}
-		}
-		catch (Exception localException)
-		{
+		} catch (Exception localException) {
 			String str2;
 			String str3 = null;
 			int j;
@@ -596,8 +559,7 @@ public class NewsEngine extends KXEngine
 				return false;
 			if ((j != 0)
 					&& ((TextUtils.isEmpty(paramString1)) || (paramString1
-							.compareTo("0") == 0)))
-			{
+							.compareTo("0") == 0))) {
 				FileUtil.setCacheData(str3, paramString6, "home_news.kx", str2);
 				setUpdateTime(NewsModel.getMyHomeModel(), str3, paramString6,
 						"home_time.kx", 1);
@@ -610,24 +572,19 @@ public class NewsEngine extends KXEngine
 
 	public boolean getMutualFriendsData(Context paramContext,
 			HomePeopleInfoModel paramHomePeopleInfoModel, String paramString1,
-			String paramString2) throws SecurityErrorException
-	{
+			String paramString2) throws SecurityErrorException {
 		this.ret = 0;
 		String str1 = Protocol.getInstance().makeMutualFriendsRequest(
 				paramString2, paramString1);
 		HttpProxy localHttpProxy = new HttpProxy(paramContext);
-		try
-		{
+		try {
 			String str3 = localHttpProxy.httpGet(str1, null, null);
 			String str2 = str3;
 			if (!parseMutualFriendsJSON(paramContext, paramHomePeopleInfoModel,
 					str2, paramString1))
 				return false;
-		}
-		catch (Exception localException)
-		{
-			while (true)
-			{
+		} catch (Exception localException) {
+			while (true) {
 				KXLog.e("NewsEngine", "getMutualFriendsData error",
 						localException);
 				String str2 = null;
@@ -639,123 +596,152 @@ public class NewsEngine extends KXEngine
 	public boolean getNewsData(Context paramContext, NewsModel paramNewsModel,
 			String paramString1, String paramString2, String paramString3,
 			String paramString4, String paramString5, String paramString6)
-			throws SecurityErrorException
-	{
+			throws SecurityErrorException {
+		this.ret = 0;		
+		User localUser = User.getInstance();
+		HttpProxy localHttpProxy = new HttpProxy(paramContext);	
+		HttpConnection localHttpConnection = new HttpConnection(paramContext);
+		String	str2 = Protocol.getInstance().makeLookNewsRequest(paramContext,
+					true, paramString1, paramString2, localUser.getUID(),
+					paramString3, paramString4, paramString5, paramString6);
+		Log.i("NewsEngine",  "url="+str2);
+		try {			
+			//String	str4 = localHttpProxy.httpGet(str2, null, null);
+			/*
+			HashMap localHashMap = new HashMap();
+			Log.i("NewsEngine",  "localHttpConnection="+localHttpConnection.toString());
+			String str4 = localHttpConnection.httpRequest(str2,
+					HttpMethod.GET, localHashMap, null, null, null);
+			Log.i("NewsEngine",  "str4="+str4);
+			String localObject1 = str4;
+			parseNewsJSON(paramContext, true,
+					(String) localObject1, paramNewsModel, 0, paramString3,
+					paramString5, paramString6);
+					
+			
+			StringBuilder url = new StringBuilder(str2);
+			
+			HttpURLConnection conn = (HttpURLConnection)new URL(url.toString()).openConnection();
+			conn.setConnectTimeout(5000);
+			conn.setRequestMethod("GET");
+			if(conn.getResponseCode() == 200){
+				Log.i("NewsEngine",  "get data");
+			}*/
+			
+			List<Map<String, String>> objectMap =  JSONUtil.getJSONObject(str2);
+			
+		
+			
+		} catch (Exception localException1) {
+			localException1.printStackTrace();
+			Log.i("NewsEngine",  localException1.getMessage());
+		}
+		return true;
+
+	}
+
+	public boolean getNewsData_bakc(Context paramContext,
+			NewsModel paramNewsModel, String paramString1, String paramString2,
+			String paramString3, String paramString4, String paramString5,
+			String paramString6) throws SecurityErrorException {
 		this.ret = 0;
 		int i = Integer.parseInt(paramString1);
 		User localUser = User.getInstance();
 		HttpProxy localHttpProxy = new HttpProxy(paramContext);
-		boolean bool;
-		if (!TextUtils.isEmpty(paramString5))
-		{
+		boolean bool = false;
+		if (!TextUtils.isEmpty(paramString5)) {
 			String str8 = String.valueOf(100);
 			if (paramString5.equals(str8))
 				bool = true;
 		}
-		while (true)
-		{
-			String str1 = String.valueOf(100);
-			if (paramString5.equals(str1))
-				paramString5 = "";
-			if (i == 0)
-			{
-				String str5 = null;
-				if ((localUser.GetLookAround()) || (paramString5.equals("11")))
-					str5 = Protocol.getInstance().makeLookNewsRequest(
-							paramContext, true, "0", paramString2,
-							localUser.getUID(), paramString3, null,
-							paramString5, paramString6);
-				try
-				{
-					String str7;
-					if ((!localUser.GetLookAround())
-							&& (!paramString5.equals("11")))
-						str7 = localHttpProxy.httpGet(str5, null, null);
-					String str6;
 
-					bool = false;
+		String str1 = String.valueOf(100);
+		if (paramString5.equals(str1))
+			paramString5 = "";
+		if (i == 0) {
+			String str5 = null;
+			if ((localUser.GetLookAround()) || (paramString5.equals("11"))) {
+				str5 = Protocol.getInstance().makeLookNewsRequest(paramContext,
+						true, "0", paramString2, localUser.getUID(),
+						paramString3, null, paramString5, paramString6);
+			}
+			try {
+				if ((!localUser.GetLookAround())
+						&& (!paramString5.equals("11")))
+					localHttpProxy.httpGet(str5, null, null);
+				String str6;
 
-					if (paramString5.equals("2"))
-					{
-						str5 = Protocol.getInstance().makeNewsDiaryRequest(
-								paramContext, "0", paramString2,
-								localUser.getUID());
+				bool = false;
 
-					}
-					str5 = Protocol.getInstance().makeNewsRequest(paramContext,
-							true, "0", paramString2, localUser.getUID(),
-							paramString3, null, paramString5, paramString6);
-
-					HttpGet localHttpGet2 = new HttpGet();
-					localHttpGet2.setHeader("Connection", "Keep-Alive");
-					localHttpGet2.setURI(new URI(Setting
-							.getInstance()
-							.getNewHost() + str5));
-					str6 = localHttpProxy.httpGet(localHttpGet2);
+				if (paramString5.equals("2")) {
+					str5 = Protocol.getInstance()
+							.makeNewsDiaryRequest(paramContext, "0",
+									paramString2, localUser.getUID());
 
 				}
-				catch (Exception localException2)
-				{
-					Object localObject2;
+				str5 = Protocol.getInstance().makeNewsRequest(paramContext,
+						true, "0", paramString2, localUser.getUID(),
+						paramString3, null, paramString5, paramString6);
 
-					KXLog.e("NewsEngine", "getNewsData error", localException2);
-					localObject2 = null;
+				HttpGet localHttpGet2 = new HttpGet();
+				localHttpGet2.setHeader("Connection", "Keep-Alive");
+				localHttpGet2.setURI(new URI(Setting.getInstance().getNewHost()
+						+ str5));
+				str6 = localHttpProxy.httpGet(localHttpGet2);
 
-					NewsModel.setHasNew(false);
-				}
+			} catch (Exception localException2) {
+				Object localObject2;
 
-				updateWidget(paramContext);
+				KXLog.e("NewsEngine", "getNewsData error", localException2);
+				localObject2 = null;
 
-				String str2 = null;
-				if ((localUser.GetLookAround()) || (paramString5.equals("11")))
-					str2 = Protocol.getInstance().makeLookNewsRequest(
-							paramContext, true, paramString1, paramString2,
-							localUser.getUID(), paramString3, paramString4,
-							paramString5, paramString6);
-				try
-				{
-					String str4;
-					if ((!localUser.GetLookAround())
-							&& (!paramString5.equals("11")))
-						str4 = localHttpProxy.httpGet(str2, null, null);
-					String str3;
+				NewsModel.setHasNew(false);
+			}
 
-					if (paramString5.equals("2"))
-					{
-						str2 = Protocol.getInstance().makeNewsDiaryRequest(
-								paramContext, paramString4, paramString2,
-								localUser.getUID());
+			updateWidget(paramContext);
 
-					}
-					str2 = Protocol.getInstance().makeNewsRequest(paramContext,
-							true, paramString1, paramString2,
-							localUser.getUID(), paramString3, paramString4,
-							paramString5, paramString6);
+			String str2 = null;
+			if ((localUser.GetLookAround()) || (paramString5.equals("11")))
+				str2 = Protocol.getInstance().makeLookNewsRequest(paramContext,
+						true, paramString1, paramString2, localUser.getUID(),
+						paramString3, paramString4, paramString5, paramString6);
+			try {
+				String str4;
+				if ((!localUser.GetLookAround())
+						&& (!paramString5.equals("11")))
+					str4 = localHttpProxy.httpGet(str2, null, null);
+				String str3;
 
-					HttpGet localHttpGet1 = new HttpGet();
-					localHttpGet1.setHeader("Connection", "Keep-Alive");
-					localHttpGet1.setURI(new URI(Setting
-							.getInstance()
-							.getNewHost() + str2));
-					str3 = localHttpProxy.httpGet(localHttpGet1);
-
-					return false;
-				}
-				catch (Exception localException1)
-				{
-
-					KXLog.e("NewsEngine", "getNewsData error", localException1);
-					Object localObject1 = null;
+				if (paramString5.equals("2")) {
+					str2 = Protocol.getInstance().makeNewsDiaryRequest(
+							paramContext, paramString4, paramString2,
+							localUser.getUID());
 
 				}
+				str2 = Protocol.getInstance().makeNewsRequest(paramContext,
+						true, paramString1, paramString2, localUser.getUID(),
+						paramString3, paramString4, paramString5, paramString6);
+
+				HttpGet localHttpGet1 = new HttpGet();
+				localHttpGet1.setHeader("Connection", "Keep-Alive");
+				localHttpGet1.setURI(new URI(Setting.getInstance().getNewHost()
+						+ str2));
+				str3 = localHttpProxy.httpGet(localHttpGet1);
+
+				return false;
+			} catch (Exception localException1) {
+
+				KXLog.e("NewsEngine", "getNewsData error", localException1);
+				Object localObject1 = null;
+
 			}
 		}
+		return bool;
 
 	}
 
 	public boolean loadHomeDataCache(Context paramContext, String paramString)
-			throws SecurityErrorException
-	{
+			throws SecurityErrorException {
 		if ((paramContext == null) || (TextUtils.isEmpty(paramString)))
 			;
 		String str1;
@@ -769,8 +755,7 @@ public class NewsEngine extends KXEngine
 	}
 
 	public boolean loadNewsCache(Context paramContext, String paramString)
-			throws SecurityErrorException
-	{
+			throws SecurityErrorException {
 		if ((paramContext == null) || (TextUtils.isEmpty(paramString)))
 			;
 		String str1;
@@ -786,27 +771,22 @@ public class NewsEngine extends KXEngine
 	}
 
 	public boolean loadUpdateTime(NewsModel paramNewsModel,
-			String paramString1, String paramString2, String paramString3)
-	{
-		try
-		{
+			String paramString1, String paramString2, String paramString3) {
+		try {
 			String str = FileUtil.getCacheData(paramString1, paramString2,
 					paramString3);
 			if (!TextUtils.isEmpty(str))
 				str = MessageCenterModel.formatTimestamp(Long.parseLong(str));
 			paramNewsModel.setUpdateTime(str);
 			return true;
-		}
-		catch (Exception localException)
-		{
+		} catch (Exception localException) {
 			localException.printStackTrace();
 		}
 		return false;
 	}
 
 	public int parseFeedbackJSON(Context paramContext, String paramString1,
-			String paramString2) throws SecurityErrorException
-	{
+			String paramString2) throws SecurityErrorException {
 		JSONObject localJSONObject = super
 				.parseJSON(paramContext, paramString1);
 		int i = 0;
@@ -816,16 +796,14 @@ public class NewsEngine extends KXEngine
 
 		i = localJSONObject.optInt("ret", 0);
 		str = localJSONObject.optString("iconsrc");
-		if (i == 0)
-		{
+		if (i == 0) {
 			this.msg = localJSONObject.optString("msg", null);
 			return i;
 		}
 		this.msg = null;
 
 		User localUser = User.getInstance();
-		if (localUser.getUID().compareTo(paramString2) == 0)
-		{
+		if (localUser.getUID().compareTo(paramString2) == 0) {
 			localUser.setLogo(str);
 			localUser.saveUserInfo(paramContext);
 			NewsModel.getMyHomeModel().setLogo120(str);
@@ -837,8 +815,7 @@ public class NewsEngine extends KXEngine
 
 	public boolean parseMutualFriendsJSON(Context paramContext,
 			HomePeopleInfoModel paramHomePeopleInfoModel, String paramString1,
-			String paramString2) throws SecurityErrorException
-	{
+			String paramString2) throws SecurityErrorException {
 		JSONObject localJSONObject1 = super.parseJSON(paramContext, true,
 				paramString1);
 		if (localJSONObject1 == null)
@@ -848,18 +825,14 @@ public class NewsEngine extends KXEngine
 		int j = localJSONObject1.optInt("total");
 		if (j <= 0)
 			return false;
-		try
-		{
+		try {
 			JSONArray localJSONArray = localJSONObject1
 					.getJSONArray("userinfo");
-			for (int k = 0;; k++)
-			{
-				if (k >= localJSONArray.length())
-				{
+			for (int k = 0;; k++) {
+				if (k >= localJSONArray.length()) {
 					String str = ((HomePeopleInfoModel.PeopleInfo) localArrayList
 							.get(-1 + localArrayList.size())).mUid;
-					if (i == 0)
-					{
+					if (i == 0) {
 						paramHomePeopleInfoModel.clear();
 						paramHomePeopleInfoModel.mTotalNum = j;
 						paramHomePeopleInfoModel.mLastUid = str;
@@ -875,29 +848,64 @@ public class NewsEngine extends KXEngine
 								.optString("name", ""), localJSONObject2
 								.optString("icon", "")));
 			}
-		}
-		catch (Exception localException)
-		{
+		} catch (Exception localException) {
 			KXLog.e("NewsEngine", "parseMutualFriendsJSON", localException);
 		}
 		return false;
 	}
+	
+	/**
+	 * 
+	 * 
+	{"ret":1,"total":1301,"news":[
+	{"fuid":105873460,
+	"fname":"\u5e7d\u9ed8\u5927\u5e08",
+	"flogo":"http:\/\/pic.kaixin001.com.cn\/logo\/87\/34\/50_105873460_1.jpg",
+	"ntype":1088,
+	"ntypename":"plaza_reposte",
+	"ctime":1420204443,
+	"stime":"01\u670802\u65e5 21:14",
+	"intro":"\u8f6c\u5e16\u7ed9\u5927\u5bb6\uff1a",
+	"privacy":"",
+	"thumbnail":"",
+	"id":9664611293,
+	"star":1,
+	"imglist":"",
+	"imgurl":"http:\/\/pic.kaixin001.com.cn\/pic\/app\/41\/86\/1192_200418640_repaste-news.gif",
+	"cnum":1,
+	"commentflag":"1",
+	"title":"\u88c5\u903c\u5230\u725b\u903c\u53ea\u662f\u4e00\u77ac\u95f4\uff01",
+	"upnum":3920,
+	"rpnum":1290,
+	"vnum":1279,
+	"group_data":"",
+	"source":"\u6765\u81ea\u7f51\u9875",
+	"source_id":"",
+	"abstract":"","ismyfrined":null}]}
+	 * @param paramContext
+	 * @param paramBoolean
+	 * @param paramString1
+	 * @param paramNewsModel
+	 * @param paramInt
+	 * @param paramString2
+	 * @param paramString3
+	 * @param paramString4
+	 * @return
+	 * @throws SecurityErrorException
+	 */
 
 	public boolean parseNewsJSON(Context paramContext, boolean paramBoolean,
 			String paramString1, NewsModel paramNewsModel, int paramInt,
 			String paramString2, String paramString3, String paramString4)
-			throws SecurityErrorException
-	{
+			throws SecurityErrorException {
 		JSONObject localJSONObject1 = super.parseJSON(paramContext,
 				paramBoolean, paramString1);
 		if (localJSONObject1 == null)
 			return false;
-		try
-		{
+		try {
 			JSONObject localJSONObject2 = localJSONObject1
 					.optJSONObject("upgradeInfo");
-			if (localJSONObject2 != null)
-			{
+			if (localJSONObject2 != null) {
 				paramNewsModel.setExp_award(localJSONObject2.optString(
 						"exp_award", ""));
 				paramNewsModel.setExp(localJSONObject2.optString("exp", ""));
@@ -909,8 +917,7 @@ public class NewsEngine extends KXEngine
 						.setLevel(localJSONObject2.optString("level", ""));
 				JSONObject localJSONObject3 = localJSONObject2
 						.optJSONObject("image");
-				if (localJSONObject3 != null)
-				{
+				if (localJSONObject3 != null) {
 					paramNewsModel.setSmall(localJSONObject3.optString("small",
 							""));
 					paramNewsModel.setMiddle(localJSONObject3.optString(
@@ -919,45 +926,37 @@ public class NewsEngine extends KXEngine
 							""));
 				}
 			}
-			if (User.getInstance().getUID().equals(paramString4))
-			{
+			if (User.getInstance().getUID().equals(paramString4)) {
 				String str6 = localJSONObject1.optString("realname");
 				User.getInstance().setName(str6);
 			}
 			paramNewsModel.setctime(localJSONObject1.optString("ctime",
 					String.valueOf(new Date().getTime() / 1000L)));
 			JSONArray localJSONArray1 = null;
-			if (paramInt == 0)
-			{
+			if (paramInt == 0) {
 				localJSONArray1 = localJSONObject1.optJSONArray("applist");
 				if (localJSONArray1 == null)
 					;
 			}
-			for (int i = 0;; i++)
-			{
+			for (int i = 0;; i++) {
 				String str3;
-				if (i >= localJSONArray1.length())
-				{
+				if (i >= localJSONArray1.length()) {
 					paramNewsModel.setLastNum(localJSONObject1.optInt("n", 0));
 					paramNewsModel.setTotalNum(
 							localJSONObject1.optInt("total", 0), paramString3);
 					String str1 = localJSONObject1.optString("logo", "");
 					String str2 = localJSONObject1.optString("logo120", "");
-					if (!TextUtils.isEmpty(str1))
-					{
+					if (!TextUtils.isEmpty(str1)) {
 						paramNewsModel.setLogo(str1);
 						if ((paramString4 != null)
-								&& (paramString4.equals(User
-										.getInstance()
+								&& (paramString4.equals(User.getInstance()
 										.getUID())))
 							User.getInstance().setLogo(str1);
 					}
-					if (!TextUtils.isEmpty(str2))
-					{
+					if (!TextUtils.isEmpty(str2)) {
 						paramNewsModel.setLogo120(str2);
 						if ((paramString4 != null)
-								&& (paramString4.equals(User
-										.getInstance()
+								&& (paramString4.equals(User.getInstance()
 										.getUID())))
 							User.getInstance().setLogo120(str2);
 					}
@@ -967,8 +966,7 @@ public class NewsEngine extends KXEngine
 
 					paramNewsModel.setStatustime("");
 				}
-				while (true)
-				{
+				while (true) {
 					paramNewsModel.setRealname(localJSONObject1
 							.optString("realname"));
 					paramNewsModel.setOnline(localJSONObject1
@@ -993,19 +991,16 @@ public class NewsEngine extends KXEngine
 							"samefriends", ""));
 					JSONObject localJSONObject4 = localJSONObject1
 							.optJSONObject("cover");
-					if (localJSONObject4 != null)
-					{
+					if (localJSONObject4 != null) {
 						String str4 = localJSONObject4.optString("id", "");
 						String str5 = localJSONObject4.optString("url", "");
 						if ((!TextUtils.isEmpty(str5))
-								&& (!TextUtils.isEmpty(str4)))
-						{
+								&& (!TextUtils.isEmpty(str4))) {
 							paramNewsModel.setCoverId(str4);
 							paramNewsModel.setCoverUrl(str5);
 							if ((paramString4 != null)
 									&& (User.getInstance().getUID()
-											.equals(paramString4)))
-							{
+											.equals(paramString4))) {
 								User.getInstance().setCoverId(str4);
 								User.getInstance().setCoverUrl(str5);
 							}
@@ -1027,8 +1022,7 @@ public class NewsEngine extends KXEngine
 							.get(i);
 					int j = localJSONObject5.optInt("aid", 1);
 					int k = localJSONObject5.optInt("num", 0);
-					switch (j)
-					{
+					switch (j) {
 					case 1:
 						paramNewsModel.setAllPhotoNum(k);
 						break;
@@ -1073,8 +1067,7 @@ public class NewsEngine extends KXEngine
 								.optString("samefriends", ""));
 						JSONObject localJSONObject6 = localJSONObject1
 								.optJSONObject("cover");
-						if (localJSONObject6 != null)
-						{
+						if (localJSONObject6 != null) {
 							paramNewsModel.setCoverId(localJSONObject6
 									.optString("id", ""));
 							paramNewsModel.setCoverUrl(localJSONObject6
@@ -1092,16 +1085,50 @@ public class NewsEngine extends KXEngine
 				}
 				return true;
 			}
-		}
-		catch (Exception localException)
-		{
+		} catch (Exception localException) {
 		}
 		return false;
 	}
+	
+	
+	/*
+	 	{"fuid":105873460,
+	"fname":"\u5e7d\u9ed8\u5927\u5e08",
+	"flogo":"http:\/\/pic.kaixin001.com.cn\/logo\/87\/34\/50_105873460_1.jpg",
+	"ntype":1088,
+	"ntypename":"plaza_reposte",
+	"ctime":1420204443,
+	"stime":"01\u670802\u65e5 21:14",
+	"intro":"\u8f6c\u5e16\u7ed9\u5927\u5bb6\uff1a",
+	"privacy":"",
+	"thumbnail":"",
+	"id":9664611293,
+	"star":1,
+	"imglist":"",
+	"imgurl":"http:\/\/pic.kaixin001.com.cn\/pic\/app\/41\/86\/1192_200418640_repaste-news.gif",
+	"cnum":1,
+	"commentflag":"1",
+	"title":"\u88c5\u903c\u5230\u725b\u903c\u53ea\u662f\u4e00\u77ac\u95f4\uff01",
+	"upnum":3920,
+	"rpnum":1290,
+	"vnum":1279,
+	"group_data":"",
+	"source":"\u6765\u81ea\u7f51\u9875",
+	"source_id":"",
+	"abstract":"","ismyfrined":null}]}
+	 **/
+	/**
+	 * 
+	 
+	 * @param paramContext
+	 * @param paramString1
+	 * @param paramString2
+	 * @return
+	 * @throws SecurityErrorException
+	 */
 
 	public int postUserLogoRequest(Context paramContext, String paramString1,
-			String paramString2) throws SecurityErrorException
-	{
+			String paramString2) throws SecurityErrorException {
 		String str1 = Protocol.getInstance().makeUpdateLogoRequest();
 		File localFile = new File(paramString1);
 		if (!localFile.exists())
@@ -1112,18 +1139,14 @@ public class NewsEngine extends KXEngine
 			localHashMap.put("upload_img", localFile);
 		HttpProxy localHttpProxy = new HttpProxy(paramContext);
 		String str2;
-		try
-		{
+		try {
 			String str3 = localHttpProxy.httpPost(str1, localHashMap, null,
 					null);
 			str2 = str3;
 			if (TextUtils.isEmpty(str2))
 				return 0;
-		}
-		catch (Exception localException)
-		{
-			while (true)
-			{
+		} catch (Exception localException) {
+			while (true) {
 				KXLog.e("NewsEngine", "postInfoCompletedRequest error",
 						localException);
 				str2 = null;
@@ -1132,62 +1155,48 @@ public class NewsEngine extends KXEngine
 		return parseFeedbackJSON(paramContext, str2, paramString2);
 	}
 
-	public boolean setHomeNewsData(Context paramContext, String paramString)
-	{
-		try
-		{
+	public boolean setHomeNewsData(Context paramContext, String paramString) {
+		try {
 			FileUtil.setCacheData(FileUtil.getKXCacheDir(paramContext), User
-					.getInstance()
-					.getUID(), "home_info.kx", paramString);
+					.getInstance().getUID(), "home_info.kx", paramString);
 			return true;
-		}
-		catch (Exception localException)
-		{
+		} catch (Exception localException) {
 			localException.printStackTrace();
 		}
 		return false;
 	}
 
-	public boolean setNewsCount(Context paramContext)
-	{
+	public boolean setNewsCount(Context paramContext) {
 		String str1 = User.getInstance().getUID();
 		String str2 = Protocol.getInstance().getNewsCountUrl(str1,
 				NewsModel.getInstance().getctime());
 		HttpProxy localHttpProxy = new HttpProxy(paramContext);
-		while (true)
-		{
+		while (true) {
 			String str3;
-			try
-			{
+			try {
 				String str4 = localHttpProxy.httpGet(str2, null, null);
 				str3 = str4;
 				if (TextUtils.isEmpty(str3))
 					return false;
-			}
-			catch (Exception localException)
-			{
+			} catch (Exception localException) {
 				KXLog.e("NewsEngine", "updateNews error", localException);
 				str3 = null;
 				continue;
 			}
-			try
-			{
+			try {
 				JSONObject localJSONObject2 = super.parseJSON(paramContext,
 						str3);
 				JSONObject localJSONObject1 = localJSONObject2;
 				if (localJSONObject1 == null)
 					continue;
-				if (localJSONObject1.optInt("hasnew", 0) != 0)
-				{
+				if (localJSONObject1.optInt("hasnew", 0) != 0) {
 					NewsModel.getInstance().setNewsCount(
 							localJSONObject1.optInt("newscount", 0));
 					NewsModel.getInstance().setPublicMore(
 							localJSONObject1.optInt("publicMore", 0));
 					return true;
 				}
-			}
-			catch (SecurityErrorException localSecurityErrorException)
-			{
+			} catch (SecurityErrorException localSecurityErrorException) {
 
 				localSecurityErrorException.printStackTrace();
 				JSONObject localJSONObject1 = null;
@@ -1199,29 +1208,22 @@ public class NewsEngine extends KXEngine
 	}
 
 	public boolean setNewsData(Context paramContext, String paramString,
-			boolean paramBoolean)
-	{
-		try
-		{
+			boolean paramBoolean) {
+		try {
 			String str1 = FileUtil.getKXCacheDir(paramContext);
 			String str2 = User.getInstance().getUID();
 			if (!parseNewsJSON(paramContext, false, paramString,
 					NewsModel.getInstance(), 0, "all", null, str2))
 				return false;
-			if (paramBoolean)
-			{
+			if (paramBoolean) {
 				FileUtil.setCacheData(str1, str2, "news_all.kx", paramString);
 				setUpdateTime(NewsModel.getInstance(), str1, str2,
 						"news_time.kx", 1);
-			}
-			else
-			{
+			} else {
 				setUpdateTime(NewsModel.getInstance(), str1, str2,
 						"news_time.kx", 0);
 			}
-		}
-		catch (Exception localException)
-		{
+		} catch (Exception localException) {
 			localException.printStackTrace();
 			return false;
 		}
@@ -1229,10 +1231,8 @@ public class NewsEngine extends KXEngine
 	}
 
 	public boolean setUpdateTime(NewsModel paramNewsModel, String paramString1,
-			String paramString2, String paramString3, int paramInt)
-	{
-		try
-		{
+			String paramString2, String paramString3, int paramInt) {
+		try {
 			long l = new GregorianCalendar().getTimeInMillis();
 			String str = String.valueOf(l);
 			if (paramInt == 1)
@@ -1240,9 +1240,7 @@ public class NewsEngine extends KXEngine
 						str);
 			paramNewsModel.setUpdateTime(MessageCenterModel.formatTimestamp(l));
 			return true;
-		}
-		catch (Exception localException)
-		{
+		} catch (Exception localException) {
 			localException.printStackTrace();
 		}
 		return false;

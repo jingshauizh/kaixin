@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:layout_gravity="center_horizontal" android:background="@drawable/message_detail_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0dip" android:textColor="@drawable/blue1" android:gravity="center" android:id="@id/message_push_download_more" android:background="@drawable/white_button_style" android:layout_width="280.0dip" android:layout_height="40.0dip" android:text="@string/message_push_failed_hint" />
+    <ProgressBar android:id="@id/loading_progressbar" android:visibility="gone" android:layout_width="40.0dip" android:layout_height="40.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+</RelativeLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/kaixin_desktop_title_bar" android:layout_alignParentBottom="true">
+        <WebView android:id="@id/diary_detail_content" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <ProgressBar android:id="@id/web_progressbar" android:background="@drawable/web_progress_backgorund" android:layout_width="fill_parent" android:layout_height="2.0dip" android:max="100" android:progress="50" android:indeterminate="false" android:indeterminateOnly="false" android:progressDrawable="@drawable/web_page_progress_drawable" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</RelativeLayout>

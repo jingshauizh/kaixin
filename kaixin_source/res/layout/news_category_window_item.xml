@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/repost_list_home_item_layout" android:background="@drawable/news_category_window_item_bg" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/category_list_item_icon_img" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="18.0sp" android:textColor="@drawable/gray4" android:gravity="center" android:id="@id/category_list_item" android:paddingTop="11.0dip" android:paddingBottom="11.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/category_list_item_icon_img" android:layout_centerVertical="true" />
+    <ImageView android:gravity="center" android:id="@id/category_list_item_img" android:paddingTop="11.0dip" android:paddingBottom="11.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/globle_icon_frame_top_chocie" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

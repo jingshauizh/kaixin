@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/contacts_prepare_title_bar" layout="@layout/kaixin_title_bar" />
+    <ScrollView android:id="@id/contacts_prepare_body" android:paddingBottom="10.0dip" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@drawable/transparent" android:layout_below="@id/contacts_prepare_title_bar"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <LinearLayout android:gravity="center" android:layout_gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="30.0dip" android:src="@drawable/desktop_friendicon" />
+                <ImageView android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/contact_arrow" />
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:src="@drawable/contact_phonebook" />
+            </LinearLayout>
+            <TextView android:textSize="16.0sp" android:textColor="@drawable/black" android:id="@id/contacts_prepare_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/contacts_prepare_text" />
+            <RelativeLayout android:gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/contact_notice" android:layout_centerInParent="true" />
+            </RelativeLayout>
+            <Button android:textSize="18.0sp" android:textStyle="bold" android:textColor="@drawable/white" android:gravity="center" android:id="@id/contacts_prepare_button" android:background="@drawable/vote_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/contacts_start_relate" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

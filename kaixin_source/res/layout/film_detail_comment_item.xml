@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="horizontal" android:id="@id/comment_list_item" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.kaixin001.view.KXFrameImageView android:id="@id/film_detail_comment_item_logo" android:padding="1.0dip" android:focusable="true" android:layout_width="38.0dip" android:layout_height="38.0dip" android:layout_marginLeft="7.0dip" android:layout_marginTop="9.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="4.0dip" />
+    <TextView android:textSize="16.0sp" android:textColor="@drawable/blue_text" android:ellipsize="end" android:id="@id/film_detail_comment_item_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:singleLine="true" android:layout_toRightOf="@id/film_detail_comment_item_logo" />
+    <ImageView android:id="@id/film_detail_comment_item_gender" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginTop="10.0dip" android:src="@drawable/global_icon_boy" android:layout_toRightOf="@id/film_detail_comment_item_name" />
+    <TextView android:textSize="12.0sp" android:textColor="@drawable/gray13" android:id="@id/film_detail_comment_item_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_alignTop="@id/film_detail_comment_item_name" android:layout_alignParentRight="true" />
+    <TextView android:textSize="14.0sp" android:textColor="@drawable/gray5" android:id="@id/film_detail_comment_item_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:layout_marginRight="8.0dip" android:layout_below="@id/film_detail_comment_item_name" android:layout_alignLeft="@id/film_detail_comment_item_name" />
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="7.0dip" android:layout_below="@id/film_detail_comment_item_content">
+        <View android:id="@id/film_detail_comment_item_bottomline1" android:background="#ffe1dcd8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+        <View android:id="@id/film_detail_comment_item_bottomline2" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    </LinearLayout>
+</RelativeLayout>

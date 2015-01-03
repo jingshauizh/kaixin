@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/gray18" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.kaixin001.view.KXImageView android:layout_gravity="center" android:id="@id/preview_photo_image" android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/photoview_picload" />
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/view_photo_bottom_buttons" android:background="@drawable/blackbg" android:paddingLeft="0.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="43.0dip" android:layout_alignParentBottom="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView android:id="@id/view_photo_saveas" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:src="@drawable/photoview_saveas_button" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/albumlist_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ProgressBar android:layout_gravity="bottom" android:id="@id/albumlist_progress_item_ProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="80.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable_white_circle" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/message_push_title_bg" android:layout_width="fill_parent" android:layout_height="45.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:gravity="center" android:id="@id/kaixin_title_bar_left_button" android:background="@drawable/title_message_push_home_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/kaixin_title_bar_center_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
+        <TextView android:textSize="20.0dip" android:textColor="@drawable/white" android:ellipsize="end" android:gravity="center" android:layout_gravity="center" android:id="@id/kaixin_title_bar_center_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="短消息" android:singleLine="true" />
+    </LinearLayout>
+    <TextView android:gravity="center" android:id="@id/kaixin_title_bar_right_cancel_button" android:background="@drawable/title_message_push_close_icon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    <TextView android:textSize="12.0sp" android:textColor="@drawable/white" android:gravity="center" android:id="@id/kaixin_title_bar_number_tips" android:background="@drawable/message_push_number_bg" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="95" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+</RelativeLayout>

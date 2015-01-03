@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">开心网</string>
     <string name="app_name_titlebar">开心网</string>
     <string name="start_com">Copyright © 2007–2014 kaixin001.com</string>
@@ -1414,4 +1415,7 @@
     <string name="umeng_xp_failed_loading">Failed loading...</string>
     <string name="umeng_xp_tip_download_pre">Start download</string>
     <string name="umeng_xp_info_banner_deprecated">Banner style is not supported for current version of SDK, please contact us for support.</string>
+    <string name="title_activity_news">NewsActivity</string>
+    <string name="hello_world">Hello world!</string>
+
 </resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="78.69998dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:id="@id/ugc_content_layout" android:background="@drawable/ugc_bar_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/ugc_btn_voice_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/ugc_btn_voice" android:background="@drawable/btn_ugc_voice_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.699982dip" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/ugc_btn_voice_text" android:background="@drawable/ugc_btn_word_voice" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/ugc_btn_record_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/ugc_btn_record" android:background="@drawable/btn_ugc_record_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.699982dip" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/ugc_btn_record_text" android:background="@drawable/ugc_btn_word_record" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <ImageView android:layout_gravity="bottom" android:background="@drawable/ugc_btn_close" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:layout_weight="1.0" />
+        <RelativeLayout android:id="@id/ugc_btn_photo_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/ugc_btn_photo" android:background="@drawable/btn_ugc_photo_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.699982dip" android:layout_centerHorizontal="true" />
+            <ImageView android:id="@id/ugc_btn_photo_text" android:background="@drawable/ugc_btn_word_takephoto" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/ugc_btn_lbs_layout" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <ImageView android:id="@id/ugc_btn_lbs" android:background="@drawable/btn_ugc_lbs_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.699982dip" android:layout_centerHorizontal="true" />
+            <ImageView android:background="@drawable/ugc_btn_word_lbs" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ImageView android:id="@id/ugc_btn_open" android:background="@drawable/btn_ugc_open_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <ImageView android:id="@id/ugc_btn_close" android:background="@drawable/btn_ugc_close_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+</RelativeLayout>

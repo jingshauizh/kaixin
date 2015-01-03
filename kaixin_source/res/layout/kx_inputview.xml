@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingTop="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="50.0dip" android:layout_alignParentBottom="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditText android:textSize="14.0sp" android:textColor="@drawable/gray4" android:textColorHint="@drawable/hint_color" android:id="@id/input_edittext" android:background="@drawable/globle_input_bottom_bg" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:maxHeight="36.0dip" android:maxLines="3" android:layout_weight="1.0" />
+    <ImageView android:layout_gravity="bottom" android:id="@id/input_btn_face" android:background="@drawable/button_face_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginBottom="8.0dip" />
+    <ImageView android:layout_gravity="bottom" android:id="@id/input_btn_at" android:background="@drawable/button_at_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginBottom="8.0dip" />
+    <Button android:textSize="15.0sp" android:textColor="@drawable/white" android:layout_gravity="bottom" android:id="@id/input_btn_send" android:background="@drawable/global_btn_bg_selector" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/input_publish" />
+</LinearLayout>

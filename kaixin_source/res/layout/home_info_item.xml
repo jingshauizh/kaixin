@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:id="@id/home_info_item_layout" android:background="@drawable/personal_information_bg_top" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_alignParentTop="true">
+        <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/gray5" android:id="@id/home_info_item_title" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="27.0dip" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" />
+        <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@drawable/gray5" android:id="@id/home_info_item_tag" android:layout_width="70.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="13.0dip" android:layout_marginBottom="13.0dip" android:text="手机号" />
+        <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@drawable/gray4" android:id="@id/home_info_item_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="13.0dip" android:layout_marginBottom="13.0dip" android:text="111122223" android:layout_weight="1.0" />
+        <EditText android:textSize="15.0sp" android:textColor="@drawable/gray4" android:id="@id/home_info_item_value_edit" android:background="@null" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="13.0dip" android:layout_marginBottom="13.0dip" android:text="111" android:singleLine="true" android:phoneNumber="true" android:layout_weight="1.0" />
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/home_info_item_edit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:src="@drawable/profile_personal_icon_modify" />
+    </LinearLayout>
+    <View android:id="@id/home_info_item_padding" android:layout_width="fill_parent" android:layout_height="10.0dip" android:layout_below="@id/home_info_item_layout" />
+</RelativeLayout>

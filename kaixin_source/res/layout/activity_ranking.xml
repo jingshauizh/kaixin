@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <ListView android:id="@id/rankingList" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="@null" android:headerDividersEnabled="false" android:footerDividersEnabled="false" />
+</LinearLayout>

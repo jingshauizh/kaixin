@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/appwidget_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/appwidget_bottom_blank_fc" android:background="@drawable/widget_bottombg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true"
+      xmlns:android="http://schemas.android.com/apk/res/android" />
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/app_notice_layout_fc" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:textSize="15.0sp" android:textStyle="bold" android:textColor="@drawable/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/widget_not_login_notice" />
+    </LinearLayout>
+    <RelativeLayout android:id="@id/app_currentState_layout_fc" android:background="@drawable/widget_titlebar" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="62.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <Button android:id="@id/app_logo_fc" android:background="@drawable/widget_logo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="14.0dip" />
+            <TextView android:id="@id/widget_logo_blank_fc" android:layout_width="5.0dip" android:layout_height="fill_parent" android:layout_toRightOf="@id/app_logo_fc" />
+            <TextView android:textSize="15.0dip" android:textColor="@drawable/gray1" android:gravity="center_vertical" android:id="@id/app_currentState_fc" android:background="@drawable/appwidget_input" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="34.0dip" android:layout_marginTop="19.0dip" android:layout_marginRight="51.0dip" android:text="@string/current_state" android:singleLine="true" android:layout_toRightOf="@id/widget_logo_blank_fc" />
+            <Button android:textSize="14.0dip" android:textStyle="bold" android:textColor="@drawable/blue_link" android:id="@id/app_button_release_fc" android:background="@drawable/appwidget_commit" android:layout_width="46.0dip" android:layout_height="38.0dip" android:layout_marginTop="17.0dip" android:text="@string/widget_input_release" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/app_head_layout_fc" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="5.0dip" android:layout_below="@id/app_currentState_layout_fc"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <RelativeLayout android:background="@drawable/widget_big_head_bg" android:layout_width="58.0dip" android:layout_height="58.0dip"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ImageView android:id="@id/app_friend_img_fc" android:layout_width="50.0dip" android:layout_height="50.0dip" android:src="@drawable/big_head_icon" android:layout_centerInParent="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout android:orientation="vertical" android:id="@id/app_news_layout_fc" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="15.0dip" android:layout_toRightOf="@id/app_head_layout_fc" android:layout_below="@id/app_currentState_layout_fc"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView android:ellipsize="end" android:id="@id/app_news_title_fc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" />
+        <TextView android:textSize="14.0dip" android:textColor="@drawable/black" android:ellipsize="end" android:id="@id/app_news_content_fc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="2" android:layout_below="@id/app_news_title_fc" />
+        <TextView android:textSize="13.0dip" android:textColor="@drawable/gray1" android:id="@id/app_news_time_fc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/app_news_content_fc" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/app_friend_avatars_fc" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="40.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_above="@id/appwidget_bottom_blank_fc"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <Button android:id="@id/app_button_pre_fc" android:background="@drawable/widget_left_arrow_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" />
+        <TextView android:textSize="14.0dip" android:textColor="@drawable/gray1" android:id="@id/app_current_index_fc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <Button android:id="@id/app_button_next_fc" android:background="@drawable/widget_right_arrow_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+</RelativeLayout>

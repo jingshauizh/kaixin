@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/news_item_contentlayout" android:background="@drawable/news_item_background_new" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="7.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/news_item_top_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/news_item_top_layout" />
+    <LinearLayout android:orientation="vertical" android:id="@id/news_item_content_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/news_item_top_layout">
+        <TextView android:textSize="15.0sp" android:textColor="@drawable/gray5" android:ellipsize="end" android:id="@id/news_item_content1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" />
+        <TextView android:textSize="13.0sp" android:textColor="@drawable/gray4" android:ellipsize="end" android:id="@id/news_item_content2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="1.0dip" android:maxLines="2" />
+        <com.kaixin001.view.KXFrameImageView android:layout_gravity="center_horizontal" android:id="@id/news_item_pic" android:layout_width="216.0dip" android:layout_height="162.0dip" android:layout_marginTop="6.0dip" android:scaleType="centerCrop" />
+    </LinearLayout>
+    <include android:id="@id/news_item_bottom_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:layout_below="@id/news_item_content_layout" layout="@layout/news_item_bottom_layout" />
+</RelativeLayout>

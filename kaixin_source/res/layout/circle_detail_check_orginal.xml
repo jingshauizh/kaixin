@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/msg_detail_button_bg" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="visible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toLeftOf="@id/circle_kaixin_title_bar_center_icon" android:layout_alignParentLeft="true">
+        <com.kaixin001.view.KXIntroView android:textSize="16.0sp" android:textColor="@drawable/blue1" android:ellipsize="end" android:id="@id/circle_detail_check_original_text" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="对我的" android:singleLine="true" />
+        <TextView android:textSize="16.0sp" android:textColor="@drawable/blue1" android:ellipsize="end" android:id="@id/circle_detail_check_original_from_text" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="来自" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:id="@id/circle_kaixin_title_bar_center_icon" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/right_arrow_style" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+</RelativeLayout>

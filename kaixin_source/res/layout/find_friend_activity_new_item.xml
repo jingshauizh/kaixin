@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/find_friend_top_methods_layout" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="9.399994dip" android:layout_marginRight="6.0dip" />
+    <LinearLayout android:orientation="vertical" android:id="@id/find_friend_item" android:background="@drawable/globle_dynamic_bg" android:focusable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_marginTop="9.399994dip" android:layout_marginRight="6.0dip">
+        <TextView android:textSize="12.0sp" android:textColor="@drawable/gray5" android:id="@id/find_friend_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="9.399994dip" android:layout_marginTop="7.0dip" android:layout_marginRight="9.399994dip" android:layout_marginBottom="6.6999817dip" android:text="@string/find_friend_recomment_star" />
+        <LinearLayout android:orientation="vertical" android:id="@id/find_friend_items_list" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        <TextView android:textSize="12.0sp" android:textColor="@drawable/gray13" android:gravity="center" android:id="@id/find_friend_item_more" android:background="@drawable/news_item_bottom_bg_mid_one" android:layout_width="fill_parent" android:layout_height="30.0dip" android:text="@string/add_friend_look_all" />
+    </LinearLayout>
+</LinearLayout>

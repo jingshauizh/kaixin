@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/albumview_item_land" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <include android:id="@id/layout_photo_1" android:layout_weight="1.0" layout="@layout/photo_item" />
+        <include android:id="@id/layout_photo_2" android:layout_weight="1.0" layout="@layout/photo_item" />
+        <include android:id="@id/layout_photo_3" android:layout_weight="1.0" layout="@layout/photo_item" />
+        <include android:id="@id/layout_photo_4" android:layout_weight="1.0" layout="@layout/photo_item" />
+        <include android:id="@id/layout_photo_5" android:layout_weight="1.0" layout="@layout/photo_item" />
+        <include android:id="@id/layout_photo_6" android:layout_weight="1.0" layout="@layout/photo_item" />
+    </LinearLayout>
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@drawable/gray1" android:id="@id/albumview_total" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+</RelativeLayout>

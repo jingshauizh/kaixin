@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:background="@drawable/kaixin_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@drawable/gray2" android:gravity="center" android:id="@id/embed_empty_item_label" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="120.0dip" android:layout_marginBottom="120.0dip" android:text="@string/chat_no_friends_online" />
+</LinearLayout>

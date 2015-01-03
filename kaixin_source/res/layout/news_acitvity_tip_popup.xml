@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="30.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="12.0sp" android:textColor="@drawable/gray13" android:gravity="center" android:id="@id/news_activity_kxintroview_popup" android:layout_width="fill_parent" android:layout_height="29.0dip" android:text="有52条新动态" />
+    <TextView android:background="@drawable/toptab_bluebar" android:layout_width="fill_parent" android:layout_height="2.0px" />
+</LinearLayout>

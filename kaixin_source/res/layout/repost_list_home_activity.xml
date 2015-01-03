@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/record_list_activity_title_bar" layout="@layout/kaixin_title_bar" />
+    <com.kaixin001.view.KXTopTabHost android:id="@id/repost_list_tabhost" android:background="@color/tabbg_default" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    <RelativeLayout>
+        <com.kaixin001.view.KXListView android:id="@id/repost_list_home_activity_list" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@drawable/transparent" android:divider="@drawable/gray1" android:dividerHeight="1.0px" android:layout_below="@id/record_list_activity_title_bar"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:id="@id/repost_list_home_empty_item_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/repost_list_home_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/repost_list_home_progress_item_ProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+            <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/repost_list_home_progress_item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

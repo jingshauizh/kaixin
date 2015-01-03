@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="75.0dip" android:layout_height="75.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/cloud_album_item_image" android:layout_width="75.0dip" android:layout_height="75.0dip" android:scaleType="centerCrop" />
+    <ImageView android:id="@id/cloud_album_item_image_back" android:background="@drawable/pic_frame" android:layout_width="75.0dip" android:layout_height="75.0dip" />
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/kaixin_background_default" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/games_title_bar" android:layout_alignParentTop="true" layout="@layout/kaixin_title_bar" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/games_title_bar">
+        <com.kaixin001.view.PullToRefreshView android:orientation="vertical" android:id="@id/games_fragment_pulldown_view" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.kaixin001.view.KXGameListView android:id="@id/kx_360_game_layout" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:listSelector="@drawable/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@drawable/global_dividing_line" android:dividerHeight="2.0px" android:layout_below="@id/kaixin_desktop_title_bar" android:footerDividersEnabled="true" />
+        </com.kaixin001.view.PullToRefreshView>
+        <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/games_fragment_loading_layout" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+            <ProgressBar android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="180.0dip" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+            <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:text="@string/downloading" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

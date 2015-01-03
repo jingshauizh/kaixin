@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/more_detail_title_bar" layout="@layout/kaixin_title_bar" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/diary_progress_item" android:paddingBottom="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/more_detail_title_bar">
+        <ProgressBar android:layout_gravity="center_vertical" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+    </LinearLayout>
+    <WebView android:id="@id/more_detail_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/more_detail_title_bar" />
+    <RelativeLayout android:id="@id/operation_layout" android:background="@drawable/bottombg1pix" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/operation_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:src="@drawable/applist_download_style" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

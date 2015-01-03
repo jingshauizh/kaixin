@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:background="@drawable/topic_group_head_backgroud" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:background="@drawable/topic_group_cirle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" />
+    <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_weight="1.0">
+        <TextView android:textSize="14.0sp" android:textColor="@drawable/gray5" android:id="@id/topic_group_head_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" />
+        <FrameLayout android:id="@id/topic_gropu_detail_layout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray15" android:ellipsize="end" android:id="@id/topic_group_head_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxLines="3" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:lineSpacingExtra="5.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="@drawable/gray15" android:id="@id/topic_group_head_detail_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:shadowColor="#ffffffff" android:shadowDx="0.0" android:shadowDy="1.0" android:shadowRadius="1.0" android:lineSpacingExtra="5.0dip" />
+        </FrameLayout>
+        <ImageView android:layout_gravity="center_horizontal" android:id="@id/topic_group_head_more" android:background="@drawable/topic_activity_description_expand" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="2.0dip" />
+    </LinearLayout>
+    <ImageView android:background="@drawable/topic_group_cirle" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" />
+</LinearLayout>

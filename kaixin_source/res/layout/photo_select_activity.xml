@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_addFriend_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/photo_select_title_bar" layout="@layout/kaixin_title_bar" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <com.kaixin001.view.KXListView android:id="@id/list_activity_list" android:paddingBottom="48.0dip" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:listSelector="@drawable/transparent" android:cacheColorHint="@drawable/transparent" android:divider="@null" android:layout_below="@id/photo_select_top_layout" />
+        <LinearLayout android:id="@id/list_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_centerInParent="true">
+            <ProgressBar android:layout_gravity="center_vertical" android:id="@id/list_progress_item_ProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+            <TextView android:textSize="18.0dip" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/list_progress_item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+        </LinearLayout>
+        <RelativeLayout android:id="@id/photo_select_camera_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="66.69998dip" android:layout_alignParentBottom="true">
+            <View android:background="@drawable/global_send_bar_backgroud" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true" />
+            <ImageView android:id="@id/photo_select_camera" android:background="@drawable/photo_select_camera_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+        <RelativeLayout android:id="@id/photo_select_bottom_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <include android:layout_width="fill_parent" android:layout_height="72.0dip" layout="@layout/photo_select_activity_bottom" />
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_desktop_title_bar" layout="@layout/kaixin_title_bar" />
+    <TextView android:textSize="16.0sp" android:textColor="@drawable/gray1" android:layout_gravity="center" android:id="@id/phone_contacts_empty_item_label" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="180.0dip" android:text="@string/phone_contacts_empty" />
+    <FrameLayout android:id="@id/phone_contact_layout_list" android:layout_width="fill_parent" android:layout_height="wrap_content"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <com.kaixin001.view.KXListView android:scrollbarSize="0.0px" android:id="@id/phone_contacts_listview" android:background="@drawable/white" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="true" android:cacheColorHint="@drawable/transparent" android:divider="@drawable/gray4" android:dividerHeight="1.0px"
+          xmlns:android="http://schemas.android.com/apk/res/android" />
+        <com.kaixin001.view.AlphabetIndexerBar android:textSize="12.0sp" android:id="@id/view_alphabet_indexer" android:focusable="false" android:focusableInTouchMode="false" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    </FrameLayout>
+    <LinearLayout android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/embed_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="350.0dip"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <ProgressBar android:layout_gravity="center_vertical" android:id="@id/embed_progress_item_ProgressBar" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+        <TextView android:textSize="16.0sp" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/embed_progress_item_label" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/reading_contacts" />
+    </LinearLayout>
+</LinearLayout>

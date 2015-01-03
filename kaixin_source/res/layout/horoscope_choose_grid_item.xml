@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/star_icon" android:background="@drawable/yun_button" android:layout_width="105.0px" android:layout_height="105.0px" android:layout_marginTop="11.0dip" android:src="@drawable/icon_bai" android:scaleType="centerCrop" />
+    <TextView android:textSize="12.0sp" android:textColor="#ff999999" android:id="@id/star_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="白羊座" />
+    <TextView android:textSize="12.0sp" android:textColor="#ff999999" android:id="@id/star_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2.0dip" android:text="03/21-04/19" />
+</LinearLayout>

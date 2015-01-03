@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/gray8" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/home_title_bar" layout="@layout/kaixin_title_bar" />
+    <com.kaixin001.view.KXTopTabHost android:id="@id/friends_tabhost" android:background="@color/tabbg_default" android:layout_width="fill_parent" android:layout_height="40.0dip" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:id="@id/layout_list" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <com.kaixin001.view.KXListView android:id="@id/friends_list" android:background="@drawable/gray8" android:scrollbars="vertical" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scrollingCache="true" android:divider="@drawable/transparent" android:dividerHeight="0.0px"
+              xmlns:android="http://schemas.android.com/apk/res/android" />
+            <TextView android:textSize="18.0sp" android:textColor="@drawable/gray1" android:gravity="center" android:layout_gravity="center_vertical" android:id="@id/face_nofriends" android:background="@drawable/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="@string/face_no_friend" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

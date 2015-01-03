@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="77" android:versionName="3.9.9" android:installLocation="auto" package="com.kaixin001.activity"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" />
+    <application android:theme="@style/CustomTheme" android:label="@string/app_name" android:icon="@drawable/icon" android:name="com.kaixin001.activity.KXApplication">
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.StartActivity" android:exported="true" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" /> 
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.LoginActivity" android:exported="true" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateVisible">
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_LOGIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="kaixin001" android:host="qq_login" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.tencent.tauth.TAuthView" android:exported="false" android:launchMode="singleTask" android:configChanges="keyboardHidden|navigation|orientation">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="auth" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.weibo.sdk.android.WeiboActivity" android:exported="false" android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.MainActivity" android:exported="true" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:alwaysRetainTaskState="true">
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_HOME_DETAIL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_NEWS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_ALBUMLIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_REPOST_LIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_REPOST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_MESSAGECENTER_DETAIL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_CHAT_LIST" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_CLOUD_ALBUM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_REPOST_DETAIL" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_HOROSCOPE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_PHOTO_ALBUM" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.WRITE_WEIBO" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_GAMES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_GIFT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_POSITION" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_TOPIC" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.EnrollActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.PwdOtherActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.PwdByEmailActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.GetPwdByPhoneActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.VerifyActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.InfoCompletedActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.FlashPlayerActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.WebPageActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="com.kaixin001.activity.UpgradeDialogActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.kaixin001.activity.GuideActivity" android:exported="false" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboardHidden" android:alwaysRetainTaskState="true" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.KXTestSettingActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.KXTestSettingActivity2" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.StubActivity" android:exported="false" android:launchMode="singleTask" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.Dialog" android:name="com.kaixin001.activity.InputFaceActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.kaixin001.activity.SettingActivity" android:exported="true" android:configChanges="keyboardHidden|orientation">
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_SETTING" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.kaixin001.activity.MMPlayerActivity" android:exported="true" android:screenOrientation="landscape" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateVisible">
+            <intent-filter>
+                <action android:name="com.kaixin001.VIEW_MMPLAYER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.BumpFriendsActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.BumpCardActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|orientation" />
+        <activity android:theme="@style/transparent_tutorial" android:name="com.kaixin001.activity.BumpTutorialActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboard|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.CaptureActivity" android:exported="false" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.EmptyActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.kaixin001.activity.CloudAlbumSettingActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@*android:style/Theme.NoTitleBar" android:name="com.kaixin001.activity.HoroscopeSettingsActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:label="@string/app_name" android:name="com.kaixin001.activity.wxapi.WXEntryActivity" android:exported="true" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.PhoneRegisterActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.kaixin001.activity.PhotoClipActivity" android:exported="false" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="com.kaixin001.PHOTO_CLIP" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@style/Theme.Kaixin.NoTitleBar" android:name="com.tencent.tauth.AddShareView" android:exported="false" android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="com.tencent.tauth.AuthActivity" android:launchMode="singleTask" android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent100228505" />
+            </intent-filter>
+        </activity>
+        <activity android:theme="@*android:style/Theme.Translucent.NoTitleBar" android:name="com.tencent.connect.common.AssistActivity" android:configChanges="keyboardHidden|orientation" />
+        <service android:name="com.kaixin001.service.RefreshNewMessageService" />
+        <service android:name="com.kaixin001.service.UpgradeService" />
+        <service android:name="com.kaixin001.service.UpdateContactsService" />
+        <service android:name="com.kaixin001.service.KaixinService" />
+        <service android:name="com.kaixin001.service.UpgradeDownloadService" />
+        <service android:name="com.kaixin001.service.SyncShareService" />
+        <service android:name="com.kaixin001.service.UploadHomgBgService" />
+        <service android:name="com.kaixin001.service.UploadClientInfoService" />
+        <service android:name="com.umeng.common.net.DownloadingService" android:exported="true" android:process=":DownloadingService" />
+        <receiver android:name="com.kaixin001.receiver.ConnectionStateReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.kaixin001.receiver.WifiStateListener">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.kaixin001.WIDGET_VIEW_NEWS_NEXT" />
+                <action android:name="com.kaixin001.WIDGET_VIEW_NEWS_PRE" />
+                <action android:name="com.kaixin001.WIDGET_UPDATE" />
+                <action android:name="com.kaixin001.WIDGET_UPDATE_INTERVAL" />
+                <action android:name="com.kaixin001.WIDGET_CHANGE_USER" />
+                <action android:name="com.kaixin001.SYNC_START" />
+                <action android:name="com.kaixin001.SYNC_STOP" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.kaixin001.receiver.KaixinReceiver">
+            <intent-filter>
+                <action android:name="com.kaixin001.INITIAL_USER" />
+                <action android:name="com.kaixin001.LOGOUT" />
+                <action android:name="com.kaixin001.ACTION_SET_NOTIFICATION" />
+                <action android:name="com.kaixin001.UPDATE_NEWS" />
+                <action android:name="com.kaixin001.SUBMIT_STATUS" />
+                <action android:name="com.kaixin001.UPDATE_FRIENDS" />
+                <action android:name="com.kaixin001.UPDATE_FRIENDS_INFO" />
+                <action android:name="com.kaixin001.QUERY_HOME_INFO" />
+                <action android:name="com.kaixin001.UPDATE_NEW_MESSAGE" />
+                <action android:name="com.kaixin001.GOTO_NEW_MESSAGE_LIST" />
+                <action android:name="com.kaixin001.GET_NEW_MESSAGE_STATE" />
+                <action android:name="com.kaixin001.UPLOAD_PHOTO" />
+                <action android:name="com.kaixin001.UPLOAD_PHOTO_COMPLETED" />
+                <action android:name="com.kaixin001.GET_MY_ALBUM_LIST" />
+                <action android:name="com.kaixin001.UPLOAD_DIARY" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.kaixin001.activity.KaixinAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.kaixin001.WIDGET_VIEW_NEWS_NEXT" />
+                <action android:name="com.kaixin001.WIDGET_VIEW_NEWS_PRE" />
+                <action android:name="com.kaixin001.WIDGET_UPDATE" />
+                <action android:name="com.kaixin001.WIDGET_UPDATE_INTERVAL" />
+                <action android:name="com.kaixin001.WIDGET_CHANGE_USER" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/kaixin_app_widget_info" />
+        </receiver>
+        <provider android:name="com.kaixin001.provider.KaixinContentProvider" android:authorities="com.kaixin001.provider" />
+        <meta-data android:name="UMENG_APPKEY" android:value="50ce862d527015268600001a" />
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="7a56145d111d255a59ac242e173795a1" />
+        <meta-data android:name="UMENG_CHANNEL" android:value="Android market" />
+        <activity android:theme="@style/transparent_activity" android:name="com.kaixin001.activity.PKVotedActivity" android:screenOrientation="portrait" />
+        <activity android:theme="@style/transparent_activity" android:name="com.kaixin001.activity.PKVoteSuccessActivity" android:screenOrientation="portrait" />
+        <service android:name="com.kaixin001.service.KXDownloadService" />
+        <receiver android:name="com.kaixin001.fragment.MoreItemDetailFragment$WxReceiver" />
+    </application>
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+</manifest>

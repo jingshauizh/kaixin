@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/gray20" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/game_detail_title_bar" android:layout_alignParentTop="true" layout="@layout/kaixin_title_bar" />
+    <RelativeLayout android:id="@id/bottom_download_layout" android:background="@drawable/white2" android:layout_width="fill_parent" android:layout_height="50.0dip" android:layout_alignParentBottom="true">
+        <View android:background="#ffe3e3e3" android:layout_width="fill_parent" android:layout_height="2.0px" />
+        <Button android:textSize="14.0dip" android:textColor="@drawable/white" android:gravity="center" android:id="@id/game_detail_bottom_btn" android:background="@drawable/login_btn_m" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginLeft="40.0dip" android:layout_marginRight="40.0dip" android:text="@string/upgrade_download" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_download_layout" android:layout_below="@id/game_detail_title_bar">
+        <LinearLayout android:orientation="vertical" android:id="@id/content_view" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <RelativeLayout android:id="@id/game_detail_title_layout" android:background="@drawable/white2" android:layout_width="fill_parent" android:layout_height="96.0dip">
+                <com.kaixin001.view.KXFrameImageView android:id="@id/game_logo" android:padding="1.0dip" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginLeft="10.0dip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+                <RelativeLayout android:id="@id/game_download_img" android:layout_width="72.0dip" android:layout_height="72.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:src="@drawable/recommend_app_download_img" android:scaleType="center" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+                    <TextView android:textSize="14.0sp" android:textColor="@drawable/gray1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dip" android:text="下载" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+                </RelativeLayout>
+                <RelativeLayout android:id="@id/game_intro_center_layout" android:paddingLeft="12.0dip" android:paddingRight="12.0dip" android:layout_width="fill_parent" android:layout_height="72.0dip" android:layout_toLeftOf="@id/game_download_img" android:layout_toRightOf="@id/game_logo" android:layout_centerVertical="true">
+                    <TextView android:textSize="15.0sp" android:textColor="@drawable/black" android:id="@id/game_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="开心网" android:singleLine="true" android:layout_alignParentTop="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:gravity="center_vertical" android:id="@id/game_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="20MB" android:layout_centerVertical="true" />
+                    <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:id="@id/game_intro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="22MB" android:singleLine="true" android:layout_alignParentBottom="true" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <ImageView android:id="@id/top_divide_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/desktop_bkg" />
+            <com.kaixin001.view.KXHorizScrollView android:id="@id/game_photo_horiz_scrollview" android:background="@drawable/white2" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="240.0dip" android:layout_marginLeft="12.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="12.0dip">
+                <LinearLayout android:orientation="horizontal" android:id="@id/ngame_photo_horiz_layout" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                    <com.kaixin001.view.KXFrameImageView android:id="@id/game_photo_index0" android:visibility="gone" android:layout_width="146.0dip" android:layout_height="240.0dip" android:scaleType="centerCrop" />
+                    <com.kaixin001.view.KXFrameImageView android:id="@id/game_photo_index1" android:visibility="gone" android:layout_width="146.0dip" android:layout_height="240.0dip" android:layout_marginLeft="4.0dip" android:scaleType="centerCrop" />
+                    <com.kaixin001.view.KXFrameImageView android:id="@id/game_photo_index2" android:visibility="gone" android:layout_width="146.0dip" android:layout_height="240.0dip" android:layout_marginLeft="4.0dip" android:scaleType="centerCrop" />
+                    <com.kaixin001.view.KXFrameImageView android:id="@id/game_photo_index3" android:visibility="gone" android:layout_width="146.0dip" android:layout_height="240.0dip" android:layout_marginLeft="4.0dip" android:scaleType="centerCrop" />
+                </LinearLayout>
+            </com.kaixin001.view.KXHorizScrollView>
+            <RelativeLayout android:id="@id/game_intro_layout" android:background="@drawable/white2" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip">
+                <TextView android:ellipsize="end" android:id="@id/tv_description" android:layout_width="fill_parent" android:layout_height="wrap_content" android:maxLines="2" android:singleLine="false" />
+            </RelativeLayout>
+            <RelativeLayout android:background="@drawable/white2" android:paddingTop="6.0dip" android:paddingRight="10.0dip" android:paddingBottom="25.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip">
+                <RelativeLayout android:id="@id/open_close_layout" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <ImageView android:id="@id/iv_open_close" android:layout_width="wrap_content" android:layout_height="18.0dip" android:src="@drawable/game_detail_open" android:layout_alignParentRight="true" />
+                    <TextView android:textSize="14.0sp" android:textColor="@drawable/toptab_bluebar" android:id="@id/tv_open_close" android:layout_width="wrap_content" android:layout_height="18.0dip" android:text="展开" android:layout_toLeftOf="@id/iv_open_close" />
+                </RelativeLayout>
+            </RelativeLayout>
+            <ImageView android:id="@id/bottom_divide_line" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:src="@drawable/desktop_bkg" />
+            <RelativeLayout android:id="@id/content_bottom_layout" android:background="@drawable/white2" android:paddingTop="15.0dip" android:paddingBottom="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip">
+                <TextView android:id="@id/tv_version" android:paddingLeft="8.0dip" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="版本：" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+                <TextView android:id="@id/tv_language" android:paddingLeft="8.0dip" android:layout_width="100.0dip" android:layout_height="wrap_content" android:text="语言：" android:layout_below="@id/tv_version" android:layout_alignParentLeft="true" />
+                <TextView android:id="@id/tv_download_count" android:paddingRight="8.0dip" android:layout_width="140.0dip" android:layout_height="wrap_content" android:text="下载：" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+                <TextView android:id="@id/tv_update_time" android:paddingRight="8.0dip" android:layout_width="140.0dip" android:layout_height="wrap_content" android:text="更新：" android:singleLine="true" android:layout_below="@id/tv_download_count" android:layout_alignParentRight="true" />
+                <TextView android:id="@id/tv_author" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="作者：" android:singleLine="true" android:layout_below="@id/tv_language" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

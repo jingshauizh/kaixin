@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/weibo_item" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/kaixin_weibo_title_bar" layout="@layout/kaixin_title_bar" />
+    <RelativeLayout android:orientation="vertical" android:background="@drawable/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <FrameLayout android:orientation="horizontal" android:id="@id/weibo_detail_ui" android:background="@drawable/listview_item_bg" android:paddingLeft="5.0dip" android:paddingTop="5.0dip" android:paddingRight="5.0dip" android:paddingBottom="5.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ScrollView android:id="@id/scroll_title" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:cacheColorHint="@drawable/transparent"
+              xmlns:android="http://schemas.android.com/apk/res/android">
+                <LinearLayout android:orientation="horizontal" android:id="@id/item_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <include layout="@layout/weibo_logo" />
+                    <include layout="@layout/weibo_item" />
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:id="@id/download_record_progress_item" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <ProgressBar android:layout_gravity="center_vertical" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:indeterminateDrawable="@drawable/progress_bar_drawable" style="?android:attr/progressBarStyleSmall" />
+            <TextView android:textSize="18.0dip" android:textColor="@drawable/gray2" android:gravity="center" android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/downloading" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

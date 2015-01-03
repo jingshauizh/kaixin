@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/kaixin_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:orientation="vertical" android:id="@id/rlyt_poi_photoes_item" android:background="@drawable/listview_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:id="@id/rlyt_poi_photoes_txt" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/iv_poi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:src="@drawable/lbs_locationicon" android:layout_alignParentLeft="true" />
+            <com.kaixin001.view.KXIntroView android:textSize="14.0sp" android:textColor="@drawable/black_news" android:ellipsize="end" android:id="@id/tv_poi_name" android:paddingTop="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="开心网北京总部" android:singleLine="true" android:layout_toLeftOf="@id/tv_distance" android:layout_toRightOf="@id/iv_poi" />
+            <TextView android:textSize="12.0sp" android:textColor="@drawable/gray2" android:ellipsize="end" android:id="@id/tv_distance" android:paddingTop="0.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="0.0dip" android:layout_marginRight="5.0dip" android:text="512米" android:singleLine="true" android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <com.kaixin001.view.KXGallery2 android:gravity="left" android:id="@id/gly_photoes" android:fadingEdge="none" android:fadingEdgeLength="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="-23.0dip" android:layout_marginBottom="5.0dip" android:spacing="10.0dip" android:layout_below="@id/rlyt_poi_photoes_txt" />
+    </RelativeLayout>
+</LinearLayout>
